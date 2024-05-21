@@ -5,19 +5,9 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development (caso esse não funcione, digite npm run e escolha uma das outras opções que aparecerem no console)
 ```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### Customize configuration
@@ -34,4 +24,10 @@ npm install --save @popperjs/core
 ```sh
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
+```
+
+### Para ver a tabela da parte de Adm
+```sh
+npm install --save datatables.net-vue3
+npm install --save datatables.net-bs5
 ```
