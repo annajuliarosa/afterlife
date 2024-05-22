@@ -29,7 +29,7 @@ export default {
 <style>
 
 footer {
-    background-color: #6D808F;
+    background-color: #617A95;
     padding: 0px 0 20px 0;
     text-align: center;
     position: absolute;

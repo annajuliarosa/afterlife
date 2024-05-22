@@ -1,8 +1,10 @@
 <template>
-    <Navbar></Navbar>
-    <h1 class="text-center">tela de adm</h1>
-    <DataTable></DataTable>
-    <Footer></Footer>
+  <div>
+      <Navbar/>
+      <h1 class="text-center">tela de adm</h1>
+      <DataTable/>
+      <Footer/>
+  </div>
 </template>
 
 <script>
