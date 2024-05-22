@@ -1,7 +1,9 @@
 <template>
     <Navbar></Navbar>
-    <h1 class="text-center">tela de adm</h1>
-    <DataTable></DataTable>
+    <div class="container">
+        <p class="text-start">Usuários Cadastrados</p>
+        <DataTable></DataTable>
+    </div>
     <Footer></Footer>
 </template>
 
@@ -17,6 +19,10 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  p{
+    font-size: 24px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
 </style>
