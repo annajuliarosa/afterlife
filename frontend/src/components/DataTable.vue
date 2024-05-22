@@ -102,10 +102,12 @@ li.dt-paging-button.page-item a.page-link {
     color: #000000;
 }
 
-.page-item.active .page-link:focus {
+.page-item.active .page-link:focus, .page-link:focus-within {
     box-shadow: 0 0px 0px 3px #90c1417e !important;
 }
+
 table.dataTable th, table.dataTable td{
     box-sizing: unset;
 }
+
 </style>
