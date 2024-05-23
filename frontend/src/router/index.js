@@ -19,6 +19,11 @@ const routes = [
     name: "viewAdm",
     component: Adm,
   },
+  {
+    path: "/documentFile/",
+    name: "DocumentFile",
+    component: DocumentFile,
+  }
 ];
 
 const router = createRouter({
