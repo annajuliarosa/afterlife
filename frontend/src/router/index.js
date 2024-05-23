@@ -7,6 +7,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "../views/Home.vue";
 import Adm from "../views/Adm.vue";
+import DocumentFile from "../views/DocumentFile.vue";
 
 const routes = [
   {
