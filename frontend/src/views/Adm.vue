@@ -11,7 +11,7 @@
 
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
-import DataTable from '../components/DataTable.vue';
+import DataTable from '../components/DataTableAdm.vue';
 
 export default {
   name: 'viewAdm',
