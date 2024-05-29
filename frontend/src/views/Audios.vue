@@ -1,13 +1,16 @@
 <template>
     <Navbar></Navbar>
-    <div class="container">
+    <div class="container mb-4">
         <p class="text-start">Arquivo: Áudios</p>
         <DataTable></DataTable>
         <div class="wrapperBotaoAudio mt-3">
             <button type="button" class="btnGravarAudio" data-bs-toggle="modal" data-bs-target="#gravarAudio"><i class="fa-solid fa-microphone"></i> GRAVAR ÁUDIO</button>
             <button type="button" class="btnNovoAudio" data-bs-toggle="modal" data-bs-target="#subirAudio"><i class="fa-solid fa-plus"></i> NOVO ÁUDIO</button>
         </div>
-        <ModalSubirAudio></ModalSubirAudio>
+        <ModalEditAudio></ModalEditAudio>
+        <ModalDeleteAudio></ModalDeleteAudio>
+        <ModalRecordAudio></ModalRecordAudio>
+        <ModalUploadAudio></ModalUploadAudio>
     </div>
     <Footer></Footer>
 </template>
@@ -16,11 +19,14 @@
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 import DataTable from '../components/DataTableAudio.vue';
-import ModalSubirAudio from '../components/ModalSubirAudio.vue';
+import ModalEditAudio from '../components/ModalEditAudio.vue';
+import ModalDeleteAudio from '../components/ModalDeleteAudio.vue';
+import ModalRecordAudio from '../components/ModalRecordAudio.vue';
+import ModalUploadAudio from '../components/ModalUploadAudio.vue';
 
 export default {
   name: 'viewAudios',
-  components: { Navbar, Footer, DataTable, ModalSubirAudio }
+  components: { Navbar, Footer, DataTable, ModalEditAudio, ModalDeleteAudio, ModalRecordAudio, ModalUploadAudio }
 }
 </script>
 
@@ -44,11 +50,12 @@ export default {
 }
 
 .btnGravarAudio{
+  font-size: 14px;
     background-color: #fff;
-    border: 2px solid black;
+    border: 1px solid black;
     margin-right: 20px;
     transition: all 0.25s;
-    width: 150px;
+    width: 130px;
 }
 
 .btnGravarAudio:hover{
@@ -58,9 +65,10 @@ export default {
 }
 
 .btnNovoAudio{
+  font-size: 14px;
     background-color: #617A95;
-    width: 150px;
-    border: 2px solid black;
+    width: 130px;
+    border: 1px solid black;
     transition: all 0.25s;
     color: #fff;
 }

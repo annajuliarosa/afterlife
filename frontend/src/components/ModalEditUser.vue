@@ -86,7 +86,7 @@ input{
   width: 110px;
   padding: 5px 0;
   border: none;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all 0.25s;
 }
 
@@ -100,7 +100,7 @@ input{
   font-weight: bold;
   width: 110px;
   padding: 5px 0;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all 0.25s;
 }
 
