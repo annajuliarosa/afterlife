@@ -1,27 +1,20 @@
-# frontend
+## Project Setup
 
-## Project setup
-```
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Vue install
+
+```sh
+npm install -g @vue/cli
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Compile and Hot-Reload for Development
 
-### Lints and fixes files
+```sh
+npm run dev  (se não funcionar -> npm run serve)
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Bootstrap installation
 
@@ -31,7 +24,21 @@ npm install --save @popperjs/core
 ```
 
 ### Add bootstrap CSS and JS components to the Vue project entrypoint (src/main.js)
+
 ```sh
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
+```
+
+### Add datatables
+
+```sh
+npm install --save datatables.net-vue3
+npm install --save datatables.net-bs5
+npm install --save datatables.net-buttons
+npm install --save datatables.net-buttons-dt
+npm install --save datatables.net-dt
+npm install --save datatables.net-responsive-dt
+npm install --save datatables.net-select
+npm install --save datatables.net-select-dt
 ```
