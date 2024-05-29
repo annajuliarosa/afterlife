@@ -1,37 +1,59 @@
 <template>
     <!-- Modal -->
-    <div class="modal fade" id="subirAudio" tabindex="-1" aria-labelledby="subirAudioLabel" aria-hidden="true">
+    <div class="modal fade" id="subirAudio" tabindex="-1" aria-labelledby="subirAudioLabel" aria-hidden="true" data-bs-backdrop="static">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="subirAudioLabel">Dependentes</h1>
+            <h1 class="modal-title fs-5" id="subirAudioLabel">Adicionar Áudios</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="container">
               <form class="row">
-                <p class="align-start tituloDependente col-9">DEPENDENTE 1</p>
-                <i class="col-3 fa-solid fa-trash text-end align-self-center m-0"></i>
-                <div class="col-lg-6 col-md-12 mt-2">
-                  <label for="nomeCompleto1" class="form-label">Nome completo</label>
-                  <input type="text" class="form-control" id="nomeCompleto1" placeholder="Lucas Vinícius Marques">
+                <div class="col-12 mt-2">
+                  <label for="tituloAudio" class="form-label">Título</label>
+                  <input type="text" class="form-control" id="tituloAudio" placeholder="Áudio 1">
                 </div>
-                <div class="col-lg-6 col-md-6 mt-2">
-                  <label for="email1" class="form-label">E-mail</label>
-                  <input type="email" class="form-control" id="parentesco1" placeholder="lucas@gmail.com">
+                <div class="col-12 mt-2">
+                  <label for="descricaoAudio" class="form-label">Descrição</label>
+                  <textarea class="form-control" id="descricaoAudio" placeholder="Áudio importante sobre X"></textarea>
                 </div>
-                <div class="col-lg-4 col-md-6 mt-2">
-                  <label for="parentesco1" class="form-label">Grau de parentesco</label>
-                  <input type="text" class="form-control" id="parentesco1">
+                <!-- enviar áudio -->
+                <!-- ------------------Fotos------------------ -->
+            <fieldset>
+              <div class="dadosUpdate">
+                <legend>Fotos</legend>
+                <div class="col-sm-3">
+                  <div class="form-group">
+                    <label for="valor_locacao" class="col-form-label"><span style="color:red">*</span> Aparecer no site?</label>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-6">
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" name="imovel_mostrarSite" value=1>Sim
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input" name="imovel_mostrarSite" value=0>Não
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mt-2">
-                  <label for="cpf1" class="form-label">CPF</label>
-                  <input type="text" class="form-control" id="cpf1" placeholder="000.000.000-00">
+
+                <div class="col-sm-5">
+                  <label for="imovel_fotos" class="col-form-label"><span style="color:red">*</span> Carregar fotos</label>
+                  <div class="upload-container">
+                    <input type="file" class="form-control" name="imovel_fotos[]" id="file-input" multiple required>
+                    <div class="upload-icon">
+                      <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                  </div>
+                  <ul class="file-list" id="file-list"></ul>
                 </div>
-                <div class="col-lg-4 col-md-6 mt-2">
-                  <label for="telefone1" class="form-label">Telefone</label>
-                  <input type="text" class="form-control" id="telefone1" placeholder="(DDD) 00000-0000">
-                </div>
+              </div>
+            </fieldset>
+            <!-- fim enviar áudio -->
                 <div class="w-100 text-center">
                   <button type="button" class="mt-2 btnAdicionar"><i class="fa-solid fa-plus"></i> Adicionar</button>
                 </div>

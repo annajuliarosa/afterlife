@@ -1,6 +1,6 @@
 <template>
   <!-- Modal -->
-  <div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="editarUsuarioLabel" aria-hidden="true">
+  <div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="editarUsuarioLabel" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -18,7 +18,7 @@
               </div>
               <div class="col-lg-6 col-md-6 mt-2">
                 <label for="email1" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="parentesco1" placeholder="lucas@gmail.com">
+                <input type="email" class="form-control" id="email1" placeholder="lucas@gmail.com">
               </div>
               <div class="col-lg-4 col-md-6 mt-2">
                 <label for="parentesco1" class="form-label">Grau de parentesco</label>

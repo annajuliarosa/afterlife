@@ -1,6 +1,6 @@
 <template>
   <!-- Modal -->
-  <div class="modal fade" id="excluirUsuario" tabindex="-1" aria-labelledby="excluirUsuarioLabel" aria-hidden="true">
+  <div class="modal fade" id="excluirUsuario" tabindex="-1" aria-labelledby="excluirUsuarioLabel" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
