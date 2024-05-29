@@ -1,10 +1,10 @@
 <template>
   <!-- Modal -->
-  <div class="modal fade" id="deleteUser" tabindex="-1" aria-labelledby="deleteUserLabel" aria-hidden="true">
+  <div class="modal fade" id="excluirUsuario" tabindex="-1" aria-labelledby="excluirUsuarioLabel" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="deleteUserLabel">Excluir</h1>
+          <h1 class="modal-title fs-5" id="excluirUsuarioLabel">Excluir</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -37,7 +37,7 @@ export default {
   width: 110px;
   padding: 5px 0;
   border: none;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all 0.25s;
 }
 
@@ -51,7 +51,7 @@ export default {
   font-weight: bold;
   width: 110px;
   padding: 5px 0;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all 0.25s;
 }
 

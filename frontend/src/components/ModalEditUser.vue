@@ -1,10 +1,10 @@
 <template>
   <!-- Modal -->
-  <div class="modal fade" id="editUser" tabindex="-1" aria-labelledby="editUserLabel" aria-hidden="true">
+  <div class="modal fade" id="editarUsuario" tabindex="-1" aria-labelledby="editarUsuarioLabel" aria-hidden="true" data-bs-backdrop="static">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="editUserLabel">Dependentes</h1>
+          <h1 class="modal-title fs-5" id="editarUsuarioLabel">Dependentes</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -18,7 +18,7 @@
               </div>
               <div class="col-lg-6 col-md-6 mt-2">
                 <label for="email1" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="parentesco1" placeholder="lucas@gmail.com">
+                <input type="email" class="form-control" id="email1" placeholder="lucas@gmail.com">
               </div>
               <div class="col-lg-4 col-md-6 mt-2">
                 <label for="parentesco1" class="form-label">Grau de parentesco</label>
@@ -86,7 +86,7 @@ input{
   width: 110px;
   padding: 5px 0;
   border: none;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all 0.25s;
 }
 
@@ -100,7 +100,7 @@ input{
   font-weight: bold;
   width: 110px;
   padding: 5px 0;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all 0.25s;
 }
 

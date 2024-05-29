@@ -7,7 +7,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "../views/Home.vue";
 import Adm from "../views/Adm.vue";
-import Text from "../views/Text.vue";
+import Audios from "../views/Audios.vue";
 
 const routes = [
   {
@@ -21,9 +21,9 @@ const routes = [
     component: Adm,
   },
   {
-    path: "/text/",
-    name: "viewText",
-    component: Text,
+    path: "/audios/",
+    name: "viewAudios",
+    component: Audios,
   },
 ];
 
