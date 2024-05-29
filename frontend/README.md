@@ -1,17 +1,20 @@
-# frontend
+## Project Setup
 
-## Project setup
-```
+```sh
 npm install
 ```
 
-### Compiles and hot-reloads for development (caso esse não funcione, digite npm run e escolha uma das outras opções que aparecerem no console)
-```
-npm run serve
+## Vue install
+
+```sh
+npm install -g @vue/cli
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev  (se não funcionar -> npm run serve)
+```
 
 ## Bootstrap installation
 
@@ -21,13 +24,21 @@ npm install --save @popperjs/core
 ```
 
 ### Add bootstrap CSS and JS components to the Vue project entrypoint (src/main.js)
+
 ```sh
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 ```
 
-### Para ver a tabela da parte de Adm
+### Add datatables
+
 ```sh
 npm install --save datatables.net-vue3
 npm install --save datatables.net-bs5
+npm install --save datatables.net-buttons
+npm install --save datatables.net-buttons-dt
+npm install --save datatables.net-dt
+npm install --save datatables.net-responsive-dt
+npm install --save datatables.net-select
+npm install --save datatables.net-select-dt
 ```

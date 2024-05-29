@@ -1,4 +1,3 @@
-    # afterlife
 ## Project Setup
 
 ```sh
@@ -36,4 +35,10 @@ import "bootstrap"
 ```sh
 npm install --save datatables.net-vue3
 npm install --save datatables.net-bs5
+npm install --save datatables.net-buttons
+npm install --save datatables.net-buttons-dt
+npm install --save datatables.net-dt
+npm install --save datatables.net-responsive-dt
+npm install --save datatables.net-select
+npm install --save datatables.net-select-dt
 ```
