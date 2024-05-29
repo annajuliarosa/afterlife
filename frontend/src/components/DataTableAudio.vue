@@ -13,10 +13,6 @@
                 </tr>
             </thead>
         </DataTable>
-        <div class="wrapperBotaoAudio mt-3">
-            <button type="button" class="btnGravarAudio"><i class="fa-solid fa-microphone"></i> GRAVAR ÁUDIO</button>
-            <button type="button" class="btnNovoAudio"><i class="fa-solid fa-plus"></i> NOVO ÁUDIO</button>
-        </div>
 </template>
 
 <script setup>
@@ -25,8 +21,8 @@ import DataTablesCore from 'datatables.net-bs5';
 
 DataTable.use(DataTablesCore);
 
-const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editUser"></i>';
-const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteUser"></i>';
+const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editarAudio"></i>';
+const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#excluirAudio"></i>';
 const audio = '<i class="fa-solid fa-microphone" type="button"></i>';
 
 const data = [
@@ -97,47 +93,5 @@ li.dt-paging-button.page-item a.page-link {
 
 table.dataTable th, table.dataTable td{
     box-sizing: unset;
-}
-
-@media screen and (min-width:768px){
-    .wrapperBotaoAudio{
-        text-align: right!important;
-    }
-}
-
-@media screen and (max-width:767px){
-    .wrapperBotaoAudio{
-        text-align: center!important;
-    }
-}
-
-.btnGravarAudio{
-    background-color: #fff;
-    border: 2px solid black;
-    margin-right: 20px;
-    transition: all 0.25s;
-    width: 150px;
-}
-
-.btnGravarAudio:hover{
-    background-color: rgb(185, 185, 185);
-    color: black;
-    border-color: black;
-}
-
-.btnNovoAudio{
-    background-color: #617A95;
-    width: 150px;
-    border: 2px solid black;
-    transition: all 0.25s;
-    color: #fff;
-}
-
-.btnNovoAudio:hover{
-    background-color: #425264;
-    color: #fff;
-    border-color: black;
-
-
 }
 </style>
