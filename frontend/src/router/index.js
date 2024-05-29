@@ -8,6 +8,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Adm from "../views/Adm.vue";
 import Text from "../views/Text.vue";
+import Video from "../views/Video.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/text/",
     name: "viewText",
     component: Text,
+  },
+  {
+    path: "/video/",
+    name: "viewVideo",
+    component: Video,
   },
 ];
 

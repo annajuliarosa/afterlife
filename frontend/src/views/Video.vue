@@ -2,12 +2,12 @@
   <div>
     <Navbar/>
     <div class="container">
-      <h2>Arquivo: Textos</h2>
-      <DataTableText/>
+      <h2>Arquivo: Vídeos</h2>
+      <DataTableVideo/>
       <div class="buttonWrapper">
-        <ButtonBlue :text="textAdd" :data-bs-toggle="'modal'" :data-bs-target="target"/> 
+        <ButtonBlue :text="videoAdd" :data-bs-toggle="'modal'" :data-bs-target="target"/> 
       </div>
-      <ModalAddText />
+      <ModalAddVideo />
     </div>
     <Footer/>
   </div>
@@ -17,16 +17,16 @@
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
 import ButtonBlue from '../components/buttons/ButtonBlue.vue';
-import ModalAddText from '../components/modals/ModalAddText.vue';
-import DataTableText from '../components/DataTableText.vue';
+import DataTableVideo from '../components/DataTableVideo.vue';
+import ModalAddVideo from '../components/modals/ModalAddVideo.vue';
 
 export default {
-  name: 'viewText',
-  components: { Navbar, Footer, ButtonBlue, ModalAddText, DataTableText },
+  name: 'viewVideo',
+  components: { Navbar, Footer, ButtonBlue, DataTableVideo, ModalAddVideo },
   data() {
     return {
-      textAdd: '+ novo texto',
-      target: '#addTextModal'
+      videoAdd: '+ adicionar vídeo',
+      target: '#addVideoModal'
     }
   }
 }

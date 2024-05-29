@@ -1,10 +1,11 @@
 <template>
   <div>
-    <ModalEditText />
-    <ModalDeleteText />
-    <DataTable :options="options" :data="data" search=false class="display nowrap" width="100%">
+    <ModalEditVideo />
+    <ModalDeleteVideo />
+    <DataTable :options="options" :data="data" search=false class="display nowrap tableVideo" width="100%">
       <thead class="collapsed">
         <tr>
+          <th>Arquivo</th>
           <th>Título</th>
           <th>Descrição</th>
           <th class="colDate">Data de Criação</th>
@@ -15,10 +16,11 @@
       </thead>
       <tbody>
         <tr v-for="(row, index) in data" :key="index">
-          <td>{{ row[0] }}</td>
-          <td>{{ row[1] }}</td>
-          <td class="colEdit">{{ row[2] }}</td>
-          <td class="colDelete">{{ row[3] }}</td>
+          <td class="tdVideo"><img :src="row[0]" alt="" class="img"/></td>
+          <td class="tdVideo">{{ row[1] }}</td>
+          <td class="tdVideo">{{ row[2] }}</td>
+          <td class="tdVideo">{{ row[3] }}</td>
+          <td class="tdVideo">{{ row[4] }}</td>
         </tr>
       </tbody>
     </DataTable>
@@ -28,8 +30,8 @@
 <script setup>
 import DataTable from 'datatables.net-vue3';
 import DataTablesCore from 'datatables.net';
-import ModalEditText from '../components/modals/ModalEditText.vue';
-import ModalDeleteText from '../components/modals/ModalDeleteText.vue';
+import ModalEditVideo from '../components/modals/ModalEditVideo.vue';
+import ModalDeleteVideo from '../components/modals/ModalDeleteVideo.vue';
 import 'datatables.net-buttons';
 import 'datatables.net-buttons/js/buttons.html5';
 import 'datatables.net-responsive';
@@ -38,13 +40,13 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 DataTable.use(DataTablesCore);
 
-const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editTextModal"></i>';
-const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteTextModal"></i>';
+const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editVideoModal"></i>';
+const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteVideoModal"></i>';
 
 const data = [
-  ['Texto 1', 'Texto sobre x', '03/04/2024 - 21:45', '03/04/2024 - 21:48', editar, excluir],
-  ['Texto 2', 'Texto sobre x', '02/04/2024 - 21:40', '03/04/2024 - 21:47', editar, excluir],
-  ['Texto 3', 'Texto sobre x', '01/04/2024 - 21:35', '03/04/2024 - 21:46', editar, excluir],
+  ['../assets/imgs/video1.png', 'Instruções', 'Instruções importantes', '03/04/2024 - 21:45', '03/04/2024 - 21:48', editar, excluir],
+  ['../assets/imgs/video2.png', 'Instruções 2', 'Instruções importantes', '02/04/2024 - 21:40', '03/04/2024 - 21:47', editar, excluir],
+  ['../assets/imgs/video3.png', 'Recordações', 'Recordações importante', '01/04/2024 - 21:35', '03/04/2024 - 21:46', editar, excluir],
 ];
 
 const options = {
@@ -61,7 +63,7 @@ const options = {
       topEnd: {},
       bottomStart: {
         pageLength: {
-          menu: [10, 25, 50, 100],
+          menu: [5, 10, 25, 50, 100],
         },
       },
       bottomEnd: {
@@ -76,10 +78,11 @@ const options = {
         [5, 10, 25, 50, 100],
         [5, 10, 25, 50, 100],
     ],
-    pageLength: 10,
+    pageLength: 5,
     autoWidth: true,
     responsive: true,
 }
+
 </script>
 
 <style scoped>
@@ -96,6 +99,7 @@ table.dataTable td.dt-type-date {
     text-align: center;
 }
 
+
 .fa-pencil:hover,
 .fa-trash:hover {
     cursor: pointer;
@@ -105,14 +109,17 @@ table.dataTable th, table.dataTable td{
     box-sizing: unset;
 }
 
-.colEdit,
-.colDelete {
-    width: 50px;
+.colEdit, .colDelete {
+    width: 50px; 
     text-align: center;
 }
 
 .colDate {
   width: 150px;
+}
+
+.img {
+    height: 100px;
 }
 
 </style>
