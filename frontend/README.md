@@ -24,16 +24,11 @@ npm install --save @popperjs/core
 ```
 
 ### Add bootstrap CSS and JS components to the Vue project entrypoint (src/main.js)
-<<<<<<< HEAD
-=======
 
->>>>>>> 214f9d1083a315ef426665ba0ae5041137cb07b2
 ```sh
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 ```
-<<<<<<< HEAD
-=======
 
 ### Add datatables
 
@@ -47,4 +42,3 @@ npm install --save datatables.net-responsive-dt
 npm install --save datatables.net-select
 npm install --save datatables.net-select-dt
 ```
->>>>>>> 214f9d1083a315ef426665ba0ae5041137cb07b2
