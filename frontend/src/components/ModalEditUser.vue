@@ -71,7 +71,7 @@ input{
 .btnAdicionar{
   width: 110px;
   background-color: #FFF;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all 0.25s;
 }
 

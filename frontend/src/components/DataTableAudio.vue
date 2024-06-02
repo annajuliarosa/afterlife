@@ -94,4 +94,9 @@ li.dt-paging-button.page-item a.page-link {
 table.dataTable th, table.dataTable td{
     box-sizing: unset;
 }
+
+.fa-microphone{
+    color: black;
+}
+
 </style>
