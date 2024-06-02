@@ -2,7 +2,7 @@
   <div class="app">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="Adm">
           <img src="../assets/imgs/AfterlifeLogoCompleta.jpeg" alt="Afterlife Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
