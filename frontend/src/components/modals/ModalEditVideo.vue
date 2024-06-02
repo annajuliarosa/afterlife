@@ -19,7 +19,7 @@
               </div>
               <div class="col-12">
                 <label for="text" class="form-label">Vídeos</label>
-                <textarea class="form-control rounded-0" rows="10" id="text" />
+              <input class="form-control rounded-0" type="file" />
               </div>
               <div class="col-12 text-center pt-3 d-flex justify-content-center">
                 <ButtonCancel :text="textCancel" :dismiss="dismiss" />
