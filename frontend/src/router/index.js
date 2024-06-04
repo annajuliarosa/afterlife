@@ -8,6 +8,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Adm from "../views/Adm.vue";
 import Audios from "../views/Audios.vue";
+import Armazenamento from "../views/Armazenamento.vue";
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: "/audios/",
     name: "viewAudios",
     component: Audios,
+  },
+  {
+    path: "/armazenamento/",
+    name: "viewArmazenamento",
+    component: Armazenamento,
   },
 ];
 

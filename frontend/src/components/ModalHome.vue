@@ -22,7 +22,7 @@
         </div>
         <div class="modal-body">
           <div class="container">
-            <form class="row justify-content-center">
+            <form class="row justify-content-center" action="Adm">
               <div class="col-lg-9 col-md-12 mt-2">
                 <input
                   type="email"
