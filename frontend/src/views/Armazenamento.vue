@@ -3,7 +3,8 @@
   <div class="container mb-4">
     <p class="text-start">Armazenamento</p>
     <div class="d-flex justify-content-end">
-      <button type="button" class="btnNovaPasta">NOVA PASTA</button>
+      <button type="button" class="btnNovaPasta" data-bs-target="#createFolder"
+                  data-bs-toggle="modal">NOVA PASTA</button>
       <input type="text" class="pesquisarPasta" placeholder="Pesquisar"/>
     </div>
     <div class="row mt-3">
@@ -45,6 +46,7 @@
       </div>
     </div>
   </div>
+  <ModalNovaPasta></ModalNovaPasta>
   <Footer></Footer>
 </template>
 
@@ -52,10 +54,11 @@
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import Folder from "../components/Folder.vue";
+import ModalNovaPasta from "../components/CreateFolder.vue";
 
 export default {
   name: "viewArmazenamento",
-  components: { Navbar, Footer, Folder },
+  components: { Navbar, Footer, Folder, ModalNovaPasta },
 };
 </script>
 
