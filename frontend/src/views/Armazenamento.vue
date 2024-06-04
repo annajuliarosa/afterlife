@@ -47,6 +47,7 @@
     </div>
   </div>
   <ModalNovaPasta></ModalNovaPasta>
+  <ModalEditarPasta></ModalEditarPasta>
   <Footer></Footer>
 </template>
 
@@ -55,10 +56,11 @@ import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import Folder from "../components/Folder.vue";
 import ModalNovaPasta from "../components/CreateFolder.vue";
+import ModalEditarPasta from "../components/EditFolder.vue";
 
 export default {
   name: "viewArmazenamento",
-  components: { Navbar, Footer, Folder, ModalNovaPasta },
+  components: { Navbar, Footer, Folder, ModalNovaPasta, ModalEditarPasta },
 };
 </script>
 
