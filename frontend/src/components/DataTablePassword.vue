@@ -22,16 +22,18 @@ import DataTablesCore from 'datatables.net-bs5';
 
 DataTable.use(DataTablesCore);
 
-const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editarAudio"></i>';
-const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#excluirAudio"></i>';
-const audio = '<i class="fa-solid fa-microphone" type="button"></i>';
+const banco = '<i class="fa-solid fa-building-columns"></i>'
+const outros = '<i class="fa-solid fa-share-nodes"></i>';
+const visivel = '<i class="fa-solid fa-eye"></i>';
+const naoVisivel = '<i class="fa-solid fa-eye-slash"></i>';
+const excluir = '<i class="fa-solid fa-trash"></i>';
+const editar = '<i class="fa-solid fa-pencil"></i>';
 
 const data = [
-    [audio, "Áudio 1", "Áudio importante sobre x", "03/04/2024 - 21:45", editar, excluir],
-    [audio, "Áudio 2", "Áudio importante sobre x", "12/05/2024 - 14:23", editar, excluir],
-    [audio, "Áudio 3", "Áudio importante sobre x", "25/05/2024 - 12:34", editar, excluir],
-    [audio, "Áudio 4", "Áudio importante sobre x", "26/05/2024 - 23:41", editar, excluir],
-    [audio, "Áudio 5", "Áudio importante sobre x", "28/05/2024 - 05:32", editar, excluir]
+    [banco, "Senha Banco do Brasil", "Banco", "******", naoVisivel, editar, excluir],
+    [banco, "Senha do Nubank", "Banco", "1234", visivel, editar, excluir],
+    [outros, "Senha do Google", "Redes sociais", "senha1234", visivel, editar, excluir],
+    [outros, "Senha do facebook", "Redes sociais", "teste123", visivel, editar, excluir],
 ];
 
 const options = {
@@ -71,11 +73,6 @@ table.dataTable th.dt-type-date,
 table.dataTable td.dt-type-numeric,
 table.dataTable td.dt-type-date {
     text-align: center;
-}
-
-.fa-pencil:hover,
-.fa-trash:hover {
-    cursor: pointer;
 }
 
 li.dt-paging-button.page-item.active a {

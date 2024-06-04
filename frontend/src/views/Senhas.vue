@@ -4,12 +4,8 @@
         <p class="text-start">Arquivo: Senhas</p>
         <DataTable></DataTable>
         <div class="wrapperBotaoAudio mt-3">
-            <button type="button" class="btnCadastrarSenha" data-bs-toggle="modal" data-bs-target="#subirAudio"><i class="fa-solid fa-plus"></i> CADASTRAR SENHA</button>
+            <button type="button" class="btnCadastrarSenha"><i class="fa-solid fa-plus"></i> CADASTRAR SENHA</button>
         </div>
-        <ModalEditAudio></ModalEditAudio>
-        <ModalDeleteAudio></ModalDeleteAudio>
-        <ModalRecordAudio></ModalRecordAudio>
-        <ModalUploadAudio></ModalUploadAudio>
     </div>
     <Footer></Footer>
 </template>
@@ -17,15 +13,11 @@
 <script>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
-import DataTable from '../components/DataTableAudio.vue';
-import ModalEditAudio from '../components/ModalEditAudio.vue';
-import ModalDeleteAudio from '../components/ModalDeleteAudio.vue';
-import ModalRecordAudio from '../components/ModalRecordAudio.vue';
-import ModalUploadAudio from '../components/ModalUploadAudio.vue';
+import DataTable from '../components/DataTablePassword.vue';
 
 export default {
   name: 'viewSenhas',
-  components: { Navbar, Footer, DataTable, ModalEditAudio, ModalDeleteAudio, ModalRecordAudio, ModalUploadAudio }
+  components: { Navbar, Footer, DataTable }
 }
 </script>
 
@@ -48,16 +40,12 @@ export default {
     }
 } 
 
-.fa-microphone{
-color: black;
-}
-
 .btnCadastrarSenha{
   font-size: 14px;
     background-color: #617A95;
     /* width: 130px; */
     padding: 5px 10px;
-    font-weight: bold;
+    /* font-weight: bold; */
     border: 1px solid black;
     transition: all 0.25s;
     color: #fff;
@@ -67,6 +55,13 @@ color: black;
     background-color: #425264;
     color: #fff;
     border-color: black;
+}
+
+
+.fa-pencil:hover,
+.fa-trash:hover,
+.fa-eye:hover, .fa-eye-slash:hover, .fa-share-nodes:hover, .fa-building-columns:hover {
+    cursor: pointer;
 }
 
 </style>
