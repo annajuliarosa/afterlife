@@ -1,7 +1,8 @@
 <template>
   <div class="wrapperPasta">
     <h3 class="tituloPasta mt-2">{{ titulo }}<span class="iconesPasta"><i class="fa-solid fa-pencil me-3" data-bs-target="#editFolder"
-                  data-bs-toggle="modal"></i><i class="fa-solid fa-trash"></i></span></h3>
+                  data-bs-toggle="modal"></i><i class="fa-solid fa-trash" data-bs-target="#excluirPasta"
+                  data-bs-toggle="modal"></i></span></h3>
     
     <p class="descricaoPasta">{{ descricao }}</p>
   </div>

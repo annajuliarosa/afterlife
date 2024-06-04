@@ -48,6 +48,7 @@
   </div>
   <ModalNovaPasta></ModalNovaPasta>
   <ModalEditarPasta></ModalEditarPasta>
+  <ModalExcluirPasta></ModalExcluirPasta>
   <Footer></Footer>
 </template>
 
@@ -57,10 +58,11 @@ import Footer from "../components/Footer.vue";
 import Folder from "../components/Folder.vue";
 import ModalNovaPasta from "../components/CreateFolder.vue";
 import ModalEditarPasta from "../components/EditFolder.vue";
+import ModalExcluirPasta from "../components/DeleteFolder.vue";
 
 export default {
   name: "viewArmazenamento",
-  components: { Navbar, Footer, Folder, ModalNovaPasta, ModalEditarPasta },
+  components: { Navbar, Footer, Folder, ModalNovaPasta, ModalEditarPasta, ModalExcluirPasta },
 };
 </script>
 
