@@ -1,10 +1,10 @@
 <template>
   <Navbar></Navbar>
   <div class="container mb-4">
-      <p class="text-start tituloPagina">Armazenamento</p>
-      <div class="wrapperNovaPastaPesquisa">
-        <button type="button" class="btnNovaPasta">NOVA PASTA</button>
-        <input type="text" class="pesquisarPasta" />
+    <p class="text-start">Armazenamento</p>
+    <div class="d-flex justify-content-end">
+      <button type="button" class="btnNovaPasta">NOVA PASTA</button>
+      <input type="text" class="pesquisarPasta" placeholder="Pesquisar"/>
     </div>
     <div class="row mt-3">
       <div class="col-lg-4 col-md-6 col-12 p-1">
@@ -94,4 +94,10 @@ p {
 .btnNovaPasta:hover {
   border-color: black;
 }
+
+.pesquisarPasta{
+  height: 34px;
+  margin-left: 10px;
+}
+
 </style>
