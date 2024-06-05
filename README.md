@@ -1,68 +1,44 @@
+## Project Setup
 
-# Setup Docker Laravel 10 com PHP 8.1
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
-
-### Passo a passo
-Clone Repositório
 ```sh
-git clone -b laravel-10-com-php-8.1 https://github.com/especializati/setup-docker-laravel.git app-laravel
+npm install
 ```
+
+## Vue install
+
 ```sh
-cd app-laravel
+npm install -g @vue/cli
 ```
 
+### Compile and Hot-Reload for Development
 
-Crie o Arquivo .env
 ```sh
-cp .env.example .env
+npm run dev  (se não funcionar -> npm run serve)
 ```
 
+## Bootstrap installation
 
-Atualize as variáveis de ambiente do arquivo .env
-```dosini
-APP_NAME="Especializa Ti"
-APP_URL=http://localhost:8989
-
-DB_CONNECTION=mysql
-DB_HOST=db
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=root
-DB_PASSWORD=root
-
-CACHE_DRIVER=redis
-QUEUE_CONNECTION=redis
-SESSION_DRIVER=redis
-
-REDIS_HOST=redis
-REDIS_PASSWORD=null
-REDIS_PORT=6379
-```
-
-
-Suba os containers do projeto
 ```sh
-docker-compose up -d
+npm install --save bootstrap
+npm install --save @popperjs/core
 ```
 
+### Add bootstrap CSS and JS components to the Vue project entrypoint (src/main.js)
 
-Acesse o container app
 ```sh
-docker-compose exec app bash
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap"
 ```
 
+### Add datatables
 
-Instale as dependências do projeto
 ```sh
-composer install
+npm install --save datatables.net-vue3
+npm install --save datatables.net-bs5
+npm install --save datatables.net-buttons
+npm install --save datatables.net-buttons-dt
+npm install --save datatables.net-dt
+npm install --save datatables.net-responsive-dt
+npm install --save datatables.net-select
+npm install --save datatables.net-select-dt
 ```
-
-
-Gere a key do projeto Laravel
-```sh
-php artisan key:generate
-```
-
-
-Acesse o projeto
-[http://localhost:8989](http://localhost:8989)
