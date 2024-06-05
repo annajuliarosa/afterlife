@@ -7,6 +7,8 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "../views/Home.vue";
 import Adm from "../views/Adm.vue";
+import Text from "../views/Text.vue";
+import Video from "../views/Video.vue";
 import Audios from "../views/Audios.vue";
 import Armazenamento from "../views/Armazenamento.vue";
 import Senhas from "../views/Senhas.vue";
@@ -36,6 +38,16 @@ const routes = [
     path: "/senhas/",
     name: "viewSenhas",
     component: Senhas,
+  },
+  {
+    path: "/video/",
+    name: "viewVideo",
+    component: Video,
+  },
+  {
+    path: "/text/",
+    name: "viewText",
+    component: Text,
   },
 ];
 
