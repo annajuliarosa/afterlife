@@ -1,24 +1,28 @@
 <template>
-  <div>
-      <Navbar/>
-      <h1 class="text-center">tela de adm</h1>
-      <DataTable/>
-      <Footer/>
+  <Navbar></Navbar>
+  <div class="container mb-3">
+      <p class="text-start">Usuários Cadastrados</p>
+      <DataTable></DataTable>
   </div>
+  <Footer></Footer>
 </template>
 
 <script>
 
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
-import DataTable from '../components/DataTable.vue';
+import DataTable from '../components/DataTableAdm.vue';
 
 export default {
-  name: 'viewAdm',
-  components: { Navbar, Footer, DataTable }
+name: 'viewAdm',
+components: { Navbar, Footer, DataTable }
 }
 </script>
 
-<style>
-
+<style scoped>
+p{
+  font-size: 24px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
 </style>

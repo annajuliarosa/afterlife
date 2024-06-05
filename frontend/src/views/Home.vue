@@ -147,13 +147,14 @@ export default {
   font-weight: bold;
   letter-spacing: 0.8px;
   font-size: 14px;
-  min-width: 100px;
-  padding: 5px 10px;
+  min-width: 98px;
+  padding: 5px;
   transition: all 0.25s ease;
 }
 
 .btnRegistrar {
   background-color: #91C141;
+  padding: 5px 10px;
 }
 
 .btnRegistrar:hover {
@@ -161,11 +162,11 @@ export default {
 }
 
 .btnEntrar {
-  background-color: #617A95;
+  background-color: #6D808F;
 }
 
 .btnEntrar:hover {
-  background-color: #4d6279;
+  background-color: #515f69;
 }
 
 @media (max-width: 991px) {
@@ -302,7 +303,7 @@ article {
 /* Footer */
 
 footer {
-  background-color: #617A95;
+  background-color: #6D808F;
   padding: 0px 0 20px 0;
   text-align: center;
   position: absolute;

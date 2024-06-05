@@ -9,6 +9,7 @@ import Home from "../views/Home.vue";
 import Adm from "../views/Adm.vue";
 import Text from "../views/Text.vue";
 import Video from "../views/Video.vue";
+import Audios from "../views/Audios.vue";
 
 const routes = [
   {
@@ -22,14 +23,19 @@ const routes = [
     component: Adm,
   },
   {
-    path: "/text/",
-    name: "viewText",
-    component: Text,
+    path: "/audios/",
+    name: "viewAudios",
+    component: Audios,
   },
   {
     path: "/video/",
     name: "viewVideo",
     component: Video,
+  },
+  {
+    path: "/text/",
+    name: "viewText",
+    component: Text,
   },
 ];
 
