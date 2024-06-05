@@ -22,7 +22,7 @@
             <fieldset>
               <div class="dadosUpdate mt-2">
                 <legend>Áudios</legend>
-                <div class="col-sm-5">
+                <div class="col-12 col-md-6 col-lg-6">
                   <label for="usuarioAudios" class="col-form-label"><i class="fas fa-cloud-upload-alt"></i> Buscar áudios</label>
                   <div class="upload-container">
                     <input type="file" class="form-control" name="usuarioAudios[]" id="file-input" multiple required>
@@ -54,7 +54,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .tituloDependente{
     font-size: 18px;
     font-weight: bold;
