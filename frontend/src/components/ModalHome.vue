@@ -1,4 +1,5 @@
 <template>
+
   <div
     class="modal fade"
     id="exampleModalToggle"
@@ -207,10 +208,12 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
 export default {
+
   name: "modalHome",
   components: {},
 };
@@ -230,3 +233,4 @@ export default {
   color: black;
 }
 </style>
+

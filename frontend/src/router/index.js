@@ -10,8 +10,10 @@ import Adm from "../views/Adm.vue";
 import Text from "../views/Text.vue";
 import Video from "../views/Video.vue";
 import Audios from "../views/Audios.vue";
+
 import Armazenamento from "../views/Armazenamento.vue";
 import Senhas from "../views/Senhas.vue";
+
 
 const routes = [
   {
@@ -30,6 +32,7 @@ const routes = [
     component: Audios,
   },
   {
+
     path: "/armazenamento/",
     name: "viewArmazenamento",
     component: Armazenamento,
@@ -40,6 +43,7 @@ const routes = [
     component: Senhas,
   },
   {
+
     path: "/video/",
     name: "viewVideo",
     component: Video,

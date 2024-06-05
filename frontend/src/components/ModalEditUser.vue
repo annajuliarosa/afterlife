@@ -1,5 +1,6 @@
 <template>
   <!-- Modal -->
+
   <div
     class="modal fade"
     id="editarUsuario"
@@ -8,21 +9,25 @@
     aria-hidden="true"
     data-bs-backdrop="static"
   >
+
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="editarUsuarioLabel">Dependentes</h1>
+
           <button
             type="button"
             class="btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"
           ></button>
+
         </div>
         <div class="modal-body">
           <div class="container">
             <form class="row">
               <p class="align-start tituloDependente col-9">DEPENDENTE 1</p>
+
               <i
                 class="col-3 fa-solid fa-trash text-end align-self-center m-0"
               ></i>
@@ -74,6 +79,7 @@
                 <button type="button" class="mt-2 btnAdicionar">
                   <i class="fa-solid fa-plus"></i> Adicionar
                 </button>
+
               </div>
             </form>
           </div>
@@ -81,9 +87,11 @@
         <div class="modal-footer justify-content-center">
           <button type="button" class="btnSalvar">SALVAR</button>
           <div class="espacoBotoes"></div>
+
           <button type="button" class="btnCancelar" data-bs-dismiss="modal">
             CANCELAR
           </button>
+
         </div>
       </div>
     </div>
@@ -92,6 +100,7 @@
 
 <script>
 export default {
+
   name: "modalEditUser",
   components: {},
 };
@@ -99,10 +108,12 @@ export default {
 
 <style>
 .tituloDependente {
+
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 0;
 }
+
 
 input {
   text-overflow: ellipsis;
@@ -116,12 +127,15 @@ input {
 }
 
 .btnAdicionar:hover {
+
   border-color: black;
 }
 
 .btnSalvar {
+
   background-color: #91c141 !important;
   color: #fff;
+
   font-weight: bold;
   width: 110px;
   padding: 5px 0;
@@ -130,7 +144,9 @@ input {
   transition: all 0.25s;
 }
 
+
 .btnSalvar:hover {
+
   border-color: black;
 }
 
@@ -144,11 +160,15 @@ input {
   transition: all 0.25s;
 }
 
+
 .btnCancelar:hover {
+
   border-color: black;
 }
 
 .espacoBotoes {
   width: 20px;
 }
+
 </style>
+

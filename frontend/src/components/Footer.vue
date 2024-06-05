@@ -10,6 +10,7 @@
     </footer>
 </template>
 
+
 <script>
 
 export default {
@@ -26,7 +27,9 @@ export default {
 
 </script>
 
+
 <style scoped>
+
 
 footer {
     background-color: #6D808F;

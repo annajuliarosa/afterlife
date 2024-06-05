@@ -1,4 +1,5 @@
 <template>
+
   <!-- Modal -->
   <div
     class="modal fade"
@@ -116,3 +117,4 @@ export default {
   color: #fff;
 }
 </style>
+
