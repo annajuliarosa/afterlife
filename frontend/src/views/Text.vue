@@ -16,8 +16,8 @@
 <script>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
-import ButtonBlue from '../components/buttons/ButtonBlue.vue';
-import ModalAddText from '../components/modals/ModalAddText.vue';
+import ButtonBlue from '../components/ButtonBlue.vue';
+import ModalAddText from '../components/ModalAddText.vue';
 import DataTableText from '../components/DataTableText.vue';
 
 export default {

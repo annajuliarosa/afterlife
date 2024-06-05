@@ -28,8 +28,8 @@
 <script setup>
 import DataTable from 'datatables.net-vue3';
 import DataTablesCore from 'datatables.net';
-import ModalEditText from '../components/modals/ModalEditText.vue';
-import ModalDeleteText from '../components/modals/ModalDeleteText.vue';
+import ModalEditText from './ModalEditText.vue';
+import ModalDeleteText from './ModalDeleteText.vue';
 import 'datatables.net-buttons';
 import 'datatables.net-buttons/js/buttons.html5';
 import 'datatables.net-responsive';

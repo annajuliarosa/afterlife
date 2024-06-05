@@ -16,9 +16,9 @@
 <script>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
-import ButtonBlue from '../components/buttons/ButtonBlue.vue';
+import ButtonBlue from '../components/ButtonBlue.vue';
 import DataTableVideo from '../components/DataTableVideo.vue';
-import ModalAddVideo from '../components/modals/ModalAddVideo.vue';
+import ModalAddVideo from '../components/ModalAddVideo.vue';
 
 export default {
   name: 'viewVideo',

@@ -114,7 +114,7 @@
 
 <script>
 
-import Modal from '../components/modals/ModalHome.vue';
+import Modal from '../components/ModalHome.vue';
 
 export default {
   name: 'viewHome',

@@ -30,8 +30,8 @@
 <script setup>
 import DataTable from 'datatables.net-vue3';
 import DataTablesCore from 'datatables.net';
-import ModalEditVideo from '../components/modals/ModalEditVideo.vue';
-import ModalDeleteVideo from '../components/modals/ModalDeleteVideo.vue';
+import ModalEditVideo from './ModalEditVideo.vue';
+import ModalDeleteVideo from './ModalDeleteVideo.vue';
 import 'datatables.net-buttons';
 import 'datatables.net-buttons/js/buttons.html5';
 import 'datatables.net-responsive';

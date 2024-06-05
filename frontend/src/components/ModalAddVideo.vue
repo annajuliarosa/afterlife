@@ -1,9 +1,9 @@
 <template>
-  <div class="modal fade" id="addTextModal" tabindex="-1" aria-labelledby="addTextModalLabel" aria-hidden="true">
+  <div class="modal fade" id="addVideoModal" tabindex="-1" aria-labelledby="addVideoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content rounded-2 modalText">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="addTextModalLabel">Criar Texto</h1>
+          <h1 class="modal-title fs-5" id="addVideoModalLabel">Adicionar Vídeos</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -18,7 +18,7 @@
                 <textarea  class="form-control rounded-0" rows="2" id="description" />
               </div>
               <div class="col-12">
-                <label for="text" class="form-label">Texto</label>
+                <label for="text" class="form-label">Vídeos</label>
                 <textarea class="form-control rounded-0" rows="10" id="text" />
               </div>
               <div class="col-12 text-center pt-3 d-flex justify-content-center">
@@ -34,11 +34,11 @@
 </template>
 
 <script>
-import ButtonGreen from '../buttons/ButtonGreen.vue'
-import ButtonCancel from '../buttons/ButtonCancel.vue'
+import ButtonGreen from './ButtonGreen.vue'
+import ButtonCancel from './ButtonCancel.vue'
 
 export default {
-  name: 'ModalAddText',
+  name: 'ModalAddVideo',
   components: { ButtonGreen, ButtonCancel }, 
   data() {
     return {

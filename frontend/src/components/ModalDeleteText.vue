@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import ButtonGreen from '../buttons/ButtonGreen.vue'
-import ButtonCancel from '../buttons/ButtonCancel.vue'
+import ButtonGreen from './ButtonGreen.vue'
+import ButtonCancel from './ButtonCancel.vue'
 
 export default {
   name: 'ModalDeleteText',
