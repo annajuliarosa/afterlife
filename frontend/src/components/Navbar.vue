@@ -28,7 +28,9 @@ export default {
 }
 </script>
 
-<style>
+
+<style scoped>
+
 .navbar {
   background-color: #f1f1f1;
 }

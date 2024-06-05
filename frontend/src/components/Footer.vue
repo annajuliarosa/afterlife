@@ -10,7 +10,8 @@
     </footer>
 </template>
 
-<script scoped>
+
+<script>
 
 export default {
     name: 'myFooter',
@@ -26,7 +27,9 @@ export default {
 
 </script>
 
-<style>
+
+<style scoped>
+
 
 footer {
     background-color: #6D808F;

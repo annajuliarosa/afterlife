@@ -11,6 +11,10 @@ import Text from "../views/Text.vue";
 import Video from "../views/Video.vue";
 import Audios from "../views/Audios.vue";
 
+import Armazenamento from "../views/Armazenamento.vue";
+import Senhas from "../views/Senhas.vue";
+
+
 const routes = [
   {
     path: "/",
@@ -28,6 +32,18 @@ const routes = [
     component: Audios,
   },
   {
+
+    path: "/armazenamento/",
+    name: "viewArmazenamento",
+    component: Armazenamento,
+  },
+  {
+    path: "/senhas/",
+    name: "viewSenhas",
+    component: Senhas,
+  },
+  {
+
     path: "/video/",
     name: "viewVideo",
     component: Video,

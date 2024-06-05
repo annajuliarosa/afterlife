@@ -47,6 +47,12 @@ export default {
     .wrapperBotaoAudio{
         text-align: center!important;
     }
+
+} 
+
+.fa-microphone{
+color: black;
+
 }
 
 .btnGravarAudio{
