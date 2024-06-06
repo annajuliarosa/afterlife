@@ -5,7 +5,6 @@
     <DataTable :options="options" :data="data" search=false class="display nowrap tableVideo" width="100%">
       <thead class="collapsed">
         <tr>
-          <th>Arquivo</th>
           <th>Título</th>
           <th>Descrição</th>
           <th class="colDate">Data de Criação</th>
@@ -16,7 +15,6 @@
       </thead>
       <tbody>
         <tr v-for="(row, index) in data" :key="index">
-          <td class="tdVideo"><img :src="row[0]" alt="" class="img"/></td>
           <td class="tdVideo">{{ row[1] }}</td>
           <td class="tdVideo">{{ row[2] }}</td>
           <td class="tdVideo">{{ row[3] }}</td>
@@ -44,9 +42,9 @@ const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="moda
 const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteVideoModal"></i>';
 
 const data = [
-  ['../assets/imgs/video1.png', 'Instruções', 'Instruções importantes', '03/04/2024 - 21:45', '03/04/2024 - 21:48', editar, excluir],
-  ['../assets/imgs/video2.png', 'Instruções 2', 'Instruções importantes', '02/04/2024 - 21:40', '03/04/2024 - 21:47', editar, excluir],
-  ['../assets/imgs/video3.png', 'Recordações', 'Recordações importante', '01/04/2024 - 21:35', '03/04/2024 - 21:46', editar, excluir],
+  ['Instruções', 'Instruções importantes', '03/04/2024 - 21:45', '03/04/2024 - 21:48', editar, excluir],
+  ['Instruções 2', 'Instruções importantes', '02/04/2024 - 21:40', '03/04/2024 - 21:47', editar, excluir],
+  ['Recordações', 'Recordações importantes', '01/04/2024 - 21:35', '03/04/2024 - 21:46', editar, excluir],
 ];
 
 const options = {
