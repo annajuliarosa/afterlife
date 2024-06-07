@@ -67,8 +67,8 @@
             urna sodales, blandit est eget, eleifend nibh.</span
           >
         </div>
-        <div class="trash-8"></div>
-        <div class="edit-9"></div>
+        <div class="trash"></div>
+        <div class="edit"></div>
       </div>
       <div class="rectangle-a">
         <div class="flex-column-dc">
@@ -79,13 +79,13 @@
             urna sodales, blandit est eget, eleifend nibh.</span
           >
         </div>
-        <div class="trash-b"></div>
-        <div class="edit-c"></div>
+        <div class="trash"></div>
+        <div class="edit"></div>
       </div>
     </div>
     <div class="flex-row">
       <div class="rectangle-d">
-        <div class="trash-e"></div>
+        <div class="trash"></div>
         <div class="flex-column-b">
           <span class="audios">ÁUDIOS</span
           ><span class="lorem-ipsum-f"
@@ -94,11 +94,11 @@
             urna sodales, blandit est eget, eleifend nibh.</span
           >
         </div>
-        <div class="edit-10"></div>
+        <div class="edit"></div>
       </div>
       <div class="rectangle-11">
-        <div class="trash-12"></div>
-        <div class="edit-13"></div>
+        <div class="trash"></div>
+        <div class="edit"></div>
         <div class="flex-column">
           <span class="textos">TEXTOS</span
           ><span class="lorem-ipsum-14"
@@ -109,18 +109,16 @@
         </div>
       </div>
       <div class="rectangle-15">
-        <div class="flex-row-d">
+        <div class="trash"></div>
+        <div class="edit"></div>
+        <div class="flex-column">
           <span class="videos">VÍDEOS</span>
-          <div class="regroup">
-            <div class="edit-16"></div>
-            <div class="trash-17"></div>
-          </div>
-        </div>
-        <span class="lorem-ipsum-18"
+          <span class="lorem-ipsum-18"
           >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
           imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales,
           blandit est eget, eleifend nibh.</span
-        >
+          >
+        </div>
       </div>
     </div>
     <div class="rectangle-19">
@@ -132,9 +130,12 @@
   </div>
 </template>
 
-<script setup lang="javascript"></script>
-
 <script>
+
+export default{
+  name:"viewArmazenamento",
+  components: {}
+}
 
 </script>
 
@@ -180,7 +181,7 @@ button {
   height: 1024px;
   margin: 0 auto;
   background: #ffffff;
-  border: 1px solid #000000;
+  border: none;
   overflow: hidden;
 }
 .rectangle {
@@ -197,7 +198,7 @@ button {
   height: 50px;
   top: 20px;
   left: 183px;
-  background: url(../assets/images/5b0c0f5d26a7be09c825148b9e175a85af768a0b.png)
+  background: url(../assets/imgs/5b0c0f5d26a7be09c825148b9e175a85af768a0b.png)
     no-repeat center;
   background-size: cover;
   z-index: 45;
@@ -209,7 +210,7 @@ button {
   height: 34.44%;
   top: 32.22%;
   left: 84.84%;
-  background: url(../assets/images/d6d039f6-8250-430f-8653-8fc2b295c85b.png)
+  background: url(../assets/imgs/d6d039f6-8250-430f-8653-8fc2b295c85b.png)
     no-repeat center;
   background-size: 100% 100%;
   z-index: 1;
@@ -221,7 +222,7 @@ button {
   height: 8px;
   top: 45px;
   left: 1508px;
-  background: url(../assets/images/5f4ac9ee-64c9-4dbf-8694-22978ce296af.png)
+  background: url(../assets/imgs/5f4ac9ee-64c9-4dbf-8694-22978ce296af.png)
     no-repeat center;
   background-size: cover;
   z-index: 2;
@@ -387,7 +388,7 @@ button.botaoNP {
   height: 30px;
   top: 14px;
   left: 366px;
-  background: url(../assets/images/6787047c60d4207ecb3c51795f7e68a82be109dc.png)
+  background: url(../assets/imgs/Trash.png)
     no-repeat center;
   background-size: contain;
   z-index: 32;
@@ -399,18 +400,19 @@ button.botaoNP {
   height: 25px;
   top: 16px;
   left: 333px;
-  background: url(../assets/images/9afe9529dbd7608ab5540c7486a9da00b210908f.png)
+  background: url(../assets/imgs/Edit.png)
     no-repeat center;
   background-size: contain;
   z-index: 31;
   border: none;
+  cursor: pointer;
 }
 .rectangle-5 {
   flex-shrink: 0;
   position: relative;
   width: 416px;
   height: 206px;
-  background: url(../assets/images/0cba6680-81bd-474d-8c6c-33b8714a1a4f.png)
+  background: url(../assets/imgs/0cba6680-81bd-474d-8c6c-33b8714a1a4f.png)
     no-repeat center;
   background-size: cover;
   z-index: 5;
@@ -463,7 +465,7 @@ button.botaoNP {
   height: 30px;
   top: 14px;
   left: 364px;
-  background: url(../assets/images/6787047c60d4207ecb3c51795f7e68a82be109dc.png)
+  background: url(../assets/imgs/Trash.png)
     no-repeat center;
   background-size: contain;
   z-index: 38;
@@ -474,7 +476,7 @@ button.botaoNP {
   height: 25px;
   top: 16px;
   left: 331px;
-  background: url(../assets/images/9afe9529dbd7608ab5540c7486a9da00b210908f.png)
+  background: url(../assets/imgs/Edit.png)
     no-repeat center;
   background-size: contain;
   z-index: 37;
@@ -536,7 +538,7 @@ button.botaoNP {
   height: 30px;
   top: 14px;
   left: 364px;
-  background: url(../assets/images/6787047c60d4207ecb3c51795f7e68a82be109dc.png)
+  background: url(../assets/imgs/Trash.png)
     no-repeat center;
   background-size: contain;
   z-index: 44;
@@ -547,7 +549,7 @@ button.botaoNP {
   height: 25px;
   top: 16px;
   left: 331px;
-  background: url(../assets/images/9afe9529dbd7608ab5540c7486a9da00b210908f.png)
+  background: url(../assets/imgs/Edit.png)
     no-repeat center;
   background-size: contain;
   z-index: 43;
@@ -577,7 +579,7 @@ button.botaoNP {
   height: 30px;
   top: 12px;
   left: 366px;
-  background: url(../assets/images/6787047c60d4207ecb3c51795f7e68a82be109dc.png)
+  background: url(../assets/imgs/Trash.png)
     no-repeat center;
   background-size: contain;
   z-index: 29;
@@ -630,7 +632,7 @@ button.botaoNP {
   height: 25px;
   top: 14px;
   left: 333px;
-  background: url(../assets/images/9afe9529dbd7608ab5540c7486a9da00b210908f.png)
+  background: url(../assets/imgs/Edit.png)
     no-repeat center;
   background-size: contain;
   z-index: 28;
@@ -640,7 +642,7 @@ button.botaoNP {
   position: relative;
   width: 416px;
   height: 206px;
-  background: url(../assets/images/ffe47c30-50d4-438d-b7b5-faa724ea24b7.png)
+  background: url(../assets/imgs/ffe47c30-50d4-438d-b7b5-faa724ea24b7.png)
     no-repeat center;
   background-size: cover;
   z-index: 9;
@@ -651,7 +653,7 @@ button.botaoNP {
   height: 30px;
   top: 12px;
   left: 364px;
-  background: url(../assets/images/6787047c60d4207ecb3c51795f7e68a82be109dc.png)
+  background: url(../assets/imgs/Trash.png)
     no-repeat center;
   background-size: contain;
   z-index: 35;
@@ -662,7 +664,7 @@ button.botaoNP {
   height: 25px;
   top: 14px;
   left: 331px;
-  background: url(../assets/images/9afe9529dbd7608ab5540c7486a9da00b210908f.png)
+  background: url(../assets/imgs/Edit.png)
     no-repeat center;
   background-size: contain;
   z-index: 34;
@@ -732,10 +734,10 @@ button.botaoNP {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  flex-shrink: 0;
   position: relative;
-  width: 84px;
+  width: 90px;
   height: 28px;
+  margin: 0 0 0 0;
   color: #ffffff;
   font-family: Roboto, var(--default-font-family);
   font-size: 24px;
@@ -743,7 +745,7 @@ button.botaoNP {
   line-height: 28px;
   text-align: center;
   white-space: nowrap;
-  z-index: 13;
+  z-index: 12;
 }
 .regroup {
   display: flex;
@@ -760,7 +762,7 @@ button.botaoNP {
   position: relative;
   width: 25px;
   height: 25px;
-  background: url(../assets/images/9afe9529dbd7608ab5540c7486a9da00b210908f.png)
+  background: url(../assets/imgs/Edit.png)
     no-repeat center;
   background-size: contain;
   z-index: 40;
@@ -770,7 +772,7 @@ button.botaoNP {
   position: relative;
   width: 30px;
   height: 30px;
-  background: url(../assets/images/6787047c60d4207ecb3c51795f7e68a82be109dc.png)
+  background: url(../assets/imgs/Trash.png)
     no-repeat center;
   background-size: contain;
   z-index: 41;
@@ -805,7 +807,7 @@ button.botaoNP {
   height: 23px;
   top: 11px;
   left: 832.75px;
-  background: url(../assets/images/ed50fbc1-d550-42f9-85e6-dd6cfeb17ee2.png)
+  background: url(../assets/imgs/ed50fbc1-d550-42f9-85e6-dd6cfeb17ee2.png)
     no-repeat center;
   background-size: cover;
   z-index: 59;
@@ -863,6 +865,10 @@ button.botaoNP {
   text-align: center;
   white-space: nowrap;
   z-index: 53;
+}
+
+.edit:hover, .trash:hover {
+  background-color: black;
 }
 
 </style>
