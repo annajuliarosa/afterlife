@@ -20,7 +20,7 @@
           </template>
         </v-data-table>
       </v-card>
-      <v-btn class="mt-3" @click="openAddModal">+ ADICIONAR VÍDEOS</v-btn>
+      <v-btn class="btnGreen btnAdd" @click="openAddModal">+ ADICIONAR VÍDEOS</v-btn>
     </div>
 
     <!-- Modal for Add/Edit Video -->
@@ -82,28 +82,24 @@ export default {
       headers: [
         { title: 'Título', align: 'start', value: 'name'},
         { title: 'Descrição', value: 'description' },
-        { title: 'Data de Criação', value: 'creationDate' },
-        { title: 'Última Alteração', value: 'lastChange' },
+        { title: 'Última Alteração', value: 'updateDate' },
         { title: '', value: 'actions',  align: 'center', sortable: false }
       ],
       videos: [
           {
             name: 'Instruções',
             description: 'Instruções importantes',
-            creationDate: "03/04/2024 - 21:45",
-            lastChange: "03/04/2024 - 21:48",
+            updateDate: "03/04/2024 - 21:48",
           },
           {
             name: 'Instruções 2',
             description: 'Instruções importantes',
-            creationDate: "04/04/2024 - 21:45",
-            lastChange: "04/04/2024 - 21:48",
+            updateDate: "04/04/2024 - 21:48",
           },
           {
             name: 'Recordações',
             description: 'Recordações importantes',
-            creationDate: "05/04/2024 - 21:45",
-            lastChange: "05/04/2024 - 21:48",
+            updateDate: "05/04/2024 - 21:48",
           }
       ],
       editedIndex: -1,

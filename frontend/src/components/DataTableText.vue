@@ -82,28 +82,24 @@ export default {
       headers: [
         { title: 'Título', align: 'start', value: 'name'},
         { title: 'Descrição', value: 'description' },
-        { title: 'Data de Criação', value: 'creationDate' },
-        { title: 'Última Alteração', value: 'lastChange' },
+        { title: 'Última Alteração', value: 'updateDate' },
         { title: '', value: 'actions',  align: 'center', sortable: false }
       ],
       texts: [
           {
             name: 'Texto 1',
             description: 'Texto sobre x',
-            creationDate: "03/04/2024 - 21:45",
-            lastChange: "03/04/2024 - 21:48",
+            updateDate: "03/04/2024 - 21:48",
           },
           {
             name: 'Texto 2',
             description: 'Texto 2 sobre x',
-            creationDate: "04/04/2024 - 21:45",
-            lastChange: "04/04/2024 - 21:48",
+            updateDate: "04/04/2024 - 21:48",
           },
           {
             name: 'Texto 3',
             description: 'Texto 3 sobre x',
-            creationDate: "05/04/2024 - 21:45",
-            lastChange: "05/04/2024 - 21:48",
+            updateDate: "05/04/2024 - 21:48",
           }
       ],
       editedIndex: -1,
