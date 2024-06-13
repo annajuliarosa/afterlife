@@ -1,5 +1,5 @@
 <template>
- <button type="button" class="btn btnGreen rounded-0" href="" data-bs-target="" data-bs-toggle="">{{text}}</button>
+ <v-btn type="button" class="btn btnGreen rounded-0" href="" data-bs-target="" data-bs-toggle="">{{text}}</v-btn>
 </template>
 
 

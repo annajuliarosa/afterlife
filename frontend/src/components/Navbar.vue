@@ -31,6 +31,7 @@ export default {
 <style>
 .navbar {
   background-color: #f1f1f1;
+  position: relative;
 }
 
 .navbar-brand img {
@@ -48,7 +49,7 @@ export default {
 }
 
 .fa-user{
-  font-size: 31px!important;
+  font-size: 28px!important;
 }
 
 </style>
