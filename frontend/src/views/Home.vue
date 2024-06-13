@@ -48,7 +48,7 @@
           <div class="col-md-4">
             <div class="container-icons">
               <div class="border-icons">
-                <img src="../assets/imgs/Chave.png" alt="chave">
+                <i class="bi bi-key icon" style="rotate: 30deg;"></i>
               </div>
             </div>
             <p>
@@ -60,7 +60,7 @@
           <div class="col-md-4">
             <div class="container-icons">
               <div class="border-icons">
-                <img src="../assets/imgs/UsuarioVerificado.png" alt="chave">
+                <i class="bi bi-person-check icon"></i>
               </div>
             </div>
             <p>
@@ -71,7 +71,7 @@
           <div class="col-md-4" style="padding-bottom:150px">
             <div class="container-icons">
               <div class="border-icons">
-                <img src="../assets/imgs/Dispositivos.png" alt="chave">
+                <i class="bi bi-phone icon"></i>
               </div>
             </div>
             <p>
@@ -277,10 +277,18 @@ article {
   height: 65px;
 }
 
+.icon {
+  font-size: 38px;
+}
+
 .border-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid black;
   border-radius: 100%;
-  width: fit-content;
+  width: 70px;
+  height: 70px;
   margin: 0 auto;
 }
 
