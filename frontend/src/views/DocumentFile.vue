@@ -4,15 +4,9 @@
        <div class="tableDocument">
             <p class="h4">Arquivo: Documentos</p>    
             <DataTableDoumentFile />
-            <div class="row justify-content-end" id="btnDoc">
-                <button id="btnDocument"><i class="bi bi-plus-lg"></i> ADICIONAR ARQUIVO</button>
-            </div>
-            <div class="container text-center" id="btnSaveClean">
-                <div class="row justify-content-md-center">
-                        <button id="btnSave">SALVAR</button>
-                        <button type="" id="btnClear">LIMPAR</button>
-                </div>
-            </div>
+            <div class="row justify-content-end" id="btnDoc">                
+                <ModalEditDocumentFile />
+            </div>         
        </div>     
     <Footer />
     </div>
@@ -23,13 +17,16 @@ import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
 import DataTableDoumentFile from '../components/DataTableDoumentFile.vue'
 
+import ModalEditDocumentFile from '../components/ModalEditDocumentFile.vue'
+
 
 export default {
     name: "DocumentFile",
     components: {
         Navbar,
         Footer,
-        DataTableDoumentFile
+        DataTableDoumentFile,
+        ModalEditDocumentFile
      },
     
 }
@@ -47,46 +44,32 @@ export default {
     margin-bottom: 2%;
 }
 
-#btnDocument {
-    background-color: #6D808F;
-    border: 1px solid #6D808F;
-    color: white;
-    font-size: 10pt;
-    font-weight: bold;
-    height: 2.5rem;
-    width: 12rem;
-    margin-left: 1%;
-}
-
 #btnDoc{
-    margin-top: 5%;
-    margin-right: 0.02rem;
+    margin-top: 3%;
 }
 
 .bi-plus-lg{    
     font-weight: bold;
 }
 
-#btnSaveClean{
-    display: flex;
-    
-    font-size: 10pt;
-    height: 2rem;    
-    font-weight: bolder;
-    width: 7rem;
-}
-
 #btnSave{
+    margin-top: 2%;
+    font-weight: bolder;
     border: 1px solid #91C141;
     color: white;
     background-color: #91C141;
+    width: 8rem;
+    height: 2rem;
 
 }
 
 #btnClear{
     border: 1px solid white;
     color: black;
+    font-weight: bolder;
     background-color: white;
+    width: 8rem;
+    height: 2rem;
 }
 
 </style>
