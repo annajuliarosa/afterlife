@@ -162,11 +162,11 @@ export default {
 }
 
 .btnEntrar {
-  background-color: #6D808F;
+  background-color: #617A95;
 }
 
 .btnEntrar:hover {
-  background-color: #515f69;
+  background-color: #4d6279;
 }
 
 @media (max-width: 991px) {
@@ -311,7 +311,7 @@ article {
 /* Footer */
 
 footer {
-  background-color: #6D808F;
+  background-color: #617A95;
   padding: 0px 0 20px 0;
   text-align: center;
   position: absolute;
