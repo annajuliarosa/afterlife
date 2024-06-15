@@ -7,7 +7,14 @@
           <v-spacer></v-spacer>
           <v-text-field v-model="search" append-icon="mdi-magnify" label="Pesquisar" single-line hide-details></v-text-field>
         </v-card-title>
-        <v-data-table :headers="headers" :items="texts" :search="search" class="elevation-1" items-per-page-text="itens por página" pageText='{0}-{1} de {2}'>
+        <v-data-table 
+          :headers="headers" 
+          :items="texts" 
+          :search="search" 
+          class="elevation-1" 
+          items-per-page-text="itens por página" 
+          pageText='{0}-{1} de {2}'
+        >
           <template v-slot:[`item.actions`]="{ item }">
             <div class="icons">
               <v-icon small class="mr-2" @click="openEditModal(item)">

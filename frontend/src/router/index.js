@@ -44,12 +44,12 @@ const routes = [
   },
   {
 
-    path: "/video/",
+    path: "/videos/",
     name: "viewVideo",
     component: Video,
   },
   {
-    path: "/text/",
+    path: "/textos/",
     name: "viewText",
     component: Text,
   },
