@@ -1,5 +1,4 @@
 <template>
-
   <div
     class="modal fade"
     id="exampleModalToggle"
@@ -23,9 +22,10 @@
         </div>
         <div class="modal-body">
           <div class="container">
-            <form class="row justify-content-center" action="Adm">
+            <form @submit.prevent="handleSubmit" class="row justify-content-center">
               <div class="col-lg-9 col-md-12 mt-2">
                 <input
+                  v-model="email"
                   type="email"
                   class="form-control"
                   id="emailLogin"
@@ -34,6 +34,7 @@
               </div>
               <div class="col-lg-9 col-md-12 mt-2">
                 <input
+                  v-model="password"
                   type="password"
                   class="form-control"
                   id="senhaLogin"
@@ -208,14 +209,37 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
 export default {
-
   name: "modalHome",
-  components: {},
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    handleSubmit() {
+      const actionUrl = this.email === 'admin@email.com' ? '/adm' : '/armazenamento';
+      const form = document.createElement('form');
+      form.action = actionUrl;
+
+      const emailInput = document.createElement('input');
+      emailInput.name = 'email';
+      emailInput.value = this.email;
+
+      const passwordInput = document.createElement('input');
+      passwordInput.name = 'password';
+      passwordInput.value = this.password;
+
+      form.appendChild(emailInput);
+      form.appendChild(passwordInput);
+      document.body.appendChild(form);
+      form.submit();
+    },
+  },
 };
 </script>
 
@@ -233,4 +257,3 @@ export default {
   color: black;
 }
 </style>
-

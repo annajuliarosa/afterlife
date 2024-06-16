@@ -11,7 +11,7 @@
           </a>
           <ul class="dropdown-menu position-absolute dropdown-menu-end">
             <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i>&#160;&#160;&#160;Configurar conta</a></li>
-            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i>&#160;&#160;&#160;Sair</a></li>
+            <li><a class="dropdown-item" href="/"><i class="fa-solid fa-right-from-bracket"></i>&#160;&#160;&#160;Sair</a></li>
           </ul>
         </li>
       </ul>
