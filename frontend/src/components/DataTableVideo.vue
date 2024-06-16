@@ -45,7 +45,8 @@
                 <v-text-field v-model="editedItem.description" label="Descrição" variant="outlined"></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-textarea label="Vídeos" variant="outlined"></v-textarea>
+                <p>Vídeos</p>
+                <UploadVideo />
               </v-col>
             </v-row>
         </v-card-text>
@@ -74,6 +75,7 @@
 
 
 <script>
+import UploadVideo from './UploadVideo.vue'
 export default {
   data() {
     return {
@@ -155,7 +157,10 @@ export default {
       }
       this.closeDeleteDialog();
     },
-  },
+  }, 
+  components: {
+    UploadVideo
+  }
 };
 </script>
 
