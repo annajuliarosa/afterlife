@@ -4,12 +4,10 @@
         <DataTable :data="data" class="table table-hover table-striped nowrap table-bordered" :options="options">
             <thead class="collapsed">
                 <tr>
-                    <th>Nome</th>
-                    <th>CPF</th>
-                    <th>Data de Nascimento</th>
-                    <th>Email</th>
-                    <th>Telefone</th>
-                    <th>Status</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Data de Criação</th>
+                    <th>Última Alteração</th>
                     <th>Editar</th>
                     <th>Excluir</th>
                 </tr>
@@ -30,17 +28,10 @@ const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="moda
 const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteUser"></i>';
 
 const data = [
-    ['Joaquim Lucas César', '626.759.075-53', '20/08/1983', 'joaquim_lucas_ramos@gmail.com', '(95) 2718-4213', 'Inativo', editar, excluir],
-    ['Samuel Igor Jorge Souza', '064.677.356-92', '05/10/1990', 'samuel_souza@gmail.com', '(27) 99564-0484', 'Ativo', editar, excluir],
-    ['Aparecida da Costa', '621.506.150-61', '01/12/1985', 'aparecida_costa@gmail.com', '(37) 98468-5369', 'Ativo', editar, excluir],
-    ['Samuel Igor Jorge Souza', '064.677.356-92', '05/10/1990', 'samuel_souza@gmail.com', '(27) 99564-0484', 'Ativo', editar, excluir],
-    ['Aparecida da Costa', '621.506.150-61', '01/12/1985', 'aparecida_costa@gmail.com', '(37) 98468-5369', 'Ativo', editar, excluir],
-    ['Samuel Igor Jorge Souza', '064.677.356-92', '05/10/1990', 'samuel_souza@gmail.com', '(27) 99564-0484', 'Ativo', editar, excluir],
-    ['Aparecida da Costa', '621.506.150-61', '01/12/1985', 'aparecida_costa@gmail.com', '(37) 98468-5369', 'Ativo', editar, excluir],
-    ['Samuel Igor Jorge Souza', '064.677.356-92', '05/10/1990', 'samuel_souza@gmail.com', '(27) 99564-0484', 'Ativo', editar, excluir],
-    ['Aparecida da Costa', '621.506.150-61', '01/12/1985', 'aparecida_costa@gmail.com', '(37) 98468-5369', 'Ativo', editar, excluir],
-    ['Samuel Igor Jorge Souza', '064.677.356-92', '05/10/1990', 'samuel_souza@gmail.com', '(27) 99564-0484', 'Ativo', editar, excluir],
-    ['Aparecida da Costa', '621.506.150-61', '01/12/1985', 'aparecida_costa@gmail.com', '(37) 98468-5369', 'Ativo', editar, excluir],
+    ['Documento de Identidade', 'Identidade', '20/08/1983', '20/08/1983', editar, excluir],
+    ['Documento de Identidade', 'Identidade', '20/08/1983', '20/08/1983', editar, excluir],
+    ['Documento de Identidade', 'Identidade', '20/08/1983', '20/08/1983', editar, excluir],
+    ['Documento de Identidade', 'Identidade', '20/08/1983', '20/08/1983', editar, excluir],
 ];
 
 const options = {

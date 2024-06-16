@@ -29,6 +29,9 @@
         <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descrição sobre o documento"></textarea>
       </div>
+      <v-flex xs12 class="text-xs-center text-sm-center text-md-center text-lg-center">
+        <!-- <UploadDocument/> -->
+      </v-flex>
       </div>
       </v-card-text>
     <div class="container text-center" id="btnSaveClean">
@@ -55,10 +58,11 @@
 
 
 <script>
+// import UploadDocument from './UploadDocument.vue';
 export default {
-  components: {
-    UploadDocument
-  }  
+//   components: {
+//     UploadDocument
+//   }  
 }
 </script>
 
