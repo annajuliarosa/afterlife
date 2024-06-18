@@ -7,7 +7,14 @@
           <v-spacer></v-spacer>
           <v-text-field v-model="search" append-icon="mdi-magnify" label="Pesquisar" single-line hide-details></v-text-field>
         </v-card-title>
-        <v-data-table :headers="headers" :items="videos" :search="search" class="elevation-1" items-per-page-text="itens por página" pageText='{0}-{1} de {2}'>
+        <v-data-table 
+          :headers="headers" 
+          :items="videos" 
+          :search="search" 
+          class="elevation-1" 
+          items-per-page-text="itens por página" 
+          pageText='{0}-{1} de {2}'
+          >
           <template v-slot:[`item.actions`]="{ item }">
             <div class="icons">
               <v-icon small class="mr-2" @click="openEditModal(item)">
@@ -38,7 +45,8 @@
                 <v-text-field v-model="editedItem.description" label="Descrição" variant="outlined"></v-text-field>
               </v-col>
               <v-col cols="12">
-                <v-textarea label="Vídeos" variant="outlined"></v-textarea>
+                <p>Vídeos</p>
+                <UploadVideo />
               </v-col>
             </v-row>
         </v-card-text>
@@ -67,6 +75,7 @@
 
 
 <script>
+import UploadVideo from './UploadVideo.vue'
 export default {
   data() {
     return {
@@ -148,7 +157,10 @@ export default {
       }
       this.closeDeleteDialog();
     },
-  },
+  }, 
+  components: {
+    UploadVideo
+  }
 };
 </script>
 
