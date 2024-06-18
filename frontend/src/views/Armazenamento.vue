@@ -59,7 +59,6 @@
 </template>
 
 <script>
-import { useRouter } from 'vue-router';
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import Folder from "../components/Folder.vue";
@@ -69,37 +68,30 @@ import ModalExcluirPasta from "../components/DeleteFolder.vue";
 
 export default {
   name: "viewArmazenamento",
-  components: { Navbar, Footer, Folder, ModalNovaPasta, ModalEditarPasta, ModalExcluirPasta },
-  setup() {
-    const router = useRouter();
-    
-    const goToDocumentFile = () => {
-      router.push({ name: 'DocumentFile' });
-    };
-    
-    const goToSenhas = () => {
-      router.push({ name: 'viewSenhas' });
-    };
-    
-    const goToAudio = () => {
-      router.push({ name: 'viewAudios' });
-    };
-    
-    const goToText = () => {
-      router.push({ name: 'viewText' });
-    };
-    
-    const goToVideo = () => {
-      router.push({ name: 'viewVideo' });
-    };
-    
-    return {
-      goToDocumentFile,
-      goToSenhas,
-      goToAudio,
-      goToText,
-      goToVideo,
-    };
+  components: { 
+    Navbar, 
+    Footer, 
+    Folder, 
+    ModalNovaPasta, 
+    ModalEditarPasta, 
+    ModalExcluirPasta 
+  },
+  methods: {
+    goToDocumentFile() {
+      this.$router.push({ name: 'DocumentFile' });
+    },
+    goToSenhas() {
+      this.$router.push({ name: 'viewSenhas' });
+    },
+    goToAudio() {
+      this.$router.push({ name: 'viewAudios' });
+    },
+    goToText() {
+      this.$router.push({ name: 'viewText' });
+    },
+    goToVideo() {
+      this.$router.push({ name: 'viewVideo' });
+    }
   }
 };
 </script>
