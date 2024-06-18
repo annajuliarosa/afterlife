@@ -1,253 +1,114 @@
 <template>
   <div>
-    <div class="container">
-      <v-card>
-        <v-card-title class="header">
-          <div class="title">Arquivo: Vídeos</div>
-          <v-spacer></v-spacer>
-          <v-text-field v-model="search" append-icon="mdi-magnify" label="Pesquisar" single-line hide-details></v-text-field>
-        </v-card-title>
-        <v-data-table 
-          :headers="headers" 
-          :items="videos" 
-          :search="search" 
-          class="elevation-1" 
-          items-per-page-text="itens por página" 
-          pageText='{0}-{1} de {2}'
-          >
-          <template v-slot:[`item.actions`]="{ item }">
-            <div class="icons">
-              <v-icon small class="mr-2" @click="openEditModal(item)">
-                mdi-pencil
-              </v-icon>
-              <v-icon small @click="openDeleteModal(item)">
-                mdi-delete
-              </v-icon>
-            </div>
-          </template>
-        </v-data-table>
-      </v-card>
-      <v-btn class="btnGreen btnAdd" @click="openAddModal">+ ADICIONAR VÍDEOS</v-btn>
-    </div>
-
-    <!-- Modal for Add/Edit Video -->
-    <v-dialog v-model="dialog" max-width="1000px">
-      <v-card>
-        <v-card-title>
-          <span class="headline">{{ dialogTitle }}</span>
-        </v-card-title>
-        <v-card-text>
-            <v-row>
-              <v-col cols="12">
-                <v-text-field v-model="editedItem.name" label="Título" variant="outlined"></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-text-field v-model="editedItem.description" label="Descrição" variant="outlined"></v-text-field>
-              </v-col>
-              <v-col cols="12">
-                <v-textarea label="Vídeos" variant="outlined"></v-textarea>
-              </v-col>
-            </v-row>
-        </v-card-text>
-        <v-card-actions class='action'>
-          <v-btn class="btnCancel" text @click="closeDialog">Cancelar</v-btn>
-          <v-btn class="btnGreen" text @click="saveItem">Salvar</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
-
-    <!-- Modal for Delete Confirmation -->
-    <v-dialog v-model="deleteDialog" max-width="500px">
-      <v-card>
-        <v-card-title class="headline">Excluir</v-card-title>
-        <v-card-text>
-          Você realmente deseja excluir o vídeo <strong>{{ deletedItem.description }}</strong>?
-        </v-card-text>
-        <v-card-actions class='action'>
-          <v-btn class="btnCancel" text @click="closeDeleteDialog">Cancelar</v-btn>
-          <v-btn  class="btnGreen" text @click="deleteItemConfirmed">Excluir</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-dialog>
+    <ModalEditVideo />
+    <ModalDeleteVideo />
+    <DataTable :options="options" :data="data" search=false class="display nowrap tableVideo" width="100%">
+      <thead class="collapsed">
+        <tr>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th class="colDate">Data de Criação</th>
+          <th class="colDate">Última Alteração</th>
+          <th class="colEdit">Editar</th>
+          <th class="colDelete">Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(row, index) in data" :key="index">
+          <td class="tdVideo">{{ row[1] }}</td>
+          <td class="tdVideo">{{ row[2] }}</td>
+          <td class="tdVideo">{{ row[3] }}</td>
+          <td class="tdVideo">{{ row[4] }}</td>
+        </tr>
+      </tbody>
+    </DataTable>
   </div>
 </template>
 
+<script setup>
+  import DataTable from 'datatables.net-vue3';
+  import DataTablesCore from 'datatables.net';
+  import ModalEditVideo from './ModalEditVideo.vue';
+  import ModalDeleteVideo from './ModalDeleteVideo.vue';
+  import 'datatables.net-buttons';
+  import 'datatables.net-buttons/js/buttons.html5';
+  import 'datatables.net-responsive';
+  import 'datatables.net-select';
+  import 'bootstrap-icons/font/bootstrap-icons.css';
 
-<script>
-export default {
-  data() {
-    return {
-      search: '',
-      dialog: false,
-      deleteDialog: false,
-      dialogTitle: '',
-      editedItem: {
-        name: '',
-        description: ''
+  DataTable.use(DataTablesCore);
+
+  const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editVideoModal"></i>';
+  const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteVideoModal"></i>';
+
+  const data = [
+    ['Instruções', 'Instruções importantes', '03/04/2024 - 21:45', '03/04/2024 - 21:48', editar, excluir],
+    ['Instruções 2', 'Instruções importantes', '02/04/2024 - 21:40', '03/04/2024 - 21:47', editar, excluir],
+    ['Recordações', 'Recordações importante', '01/04/2024 - 21:35', '03/04/2024 - 21:46', editar, excluir],
+  ];
+  const options = {
+      language: {
+          decimal: "",
+          emptyTable: "Sem dados disponíveis",
+          infoPostFix: "",
+          thousands: ",",
+          lengthMenu: "_MENU_ entradas por página",
+          zeroRecords: "Nenhum resultado encontrado",
       },
-      deletedItem: null,
-      headers: [
-        { title: 'Título', align: 'start', value: 'name'},
-        { title: 'Descrição', value: 'description' },
-        { title: 'Última Alteração', value: 'updateDate' },
-        { title: '', value: 'actions',  align: 'center', sortable: false }
-      ],
-      videos: [
-          {
-            name: 'Instruções',
-            description: 'Instruções importantes',
-            updateDate: "03/04/2024 - 21:48",
+      layout: {
+        topStart: {},
+        topEnd: {},
+        bottomStart: {
+          pageLength: {
+            menu: [5, 10, 25, 50, 100],
           },
-          {
-            name: 'Instruções 2',
-            description: 'Instruções importantes',
-            updateDate: "04/04/2024 - 21:48",
+        },
+        bottomEnd: {
+          paging: {
+            numbers: 3,
           },
-          {
-            name: 'Recordações',
-            description: 'Recordações importantes',
-            updateDate: "05/04/2024 - 21:48",
-          }
-      ],
-      editedIndex: -1,
-      defaultItem: {
-        name: '',
-        description: ''
+        },
       },
-    };
-  },
-  methods: {
-    openAddModal() {
-      this.dialogTitle = 'Adicionar Vídeos';
-      this.editedItem = Object.assign({}, this.defaultItem);
-      this.dialog = true;
-    },
-    openEditModal(item) {
-      this.dialogTitle = 'Editar Vídeos';
-      this.editedItem = Object.assign({}, item);
-      this.dialog = true;
-    },
-    openDeleteModal(item) {
-      this.deletedItem = item;
-      this.deleteDialog = true;
-    },
-    closeDialog() {
-      this.dialog = false;
-    },
-    closeDeleteDialog() {
-      this.deleteDialog = false;
-    },
-    saveItem() {
-      if (this.dialogTitle === 'Adicionar Vídeos') {
-        this.videos.push(Object.assign({}, this.editedItem));
-      } else {
-        const index = this.videos.findIndex(i => i.description === this.editedItem.description);
-        if (index !== -1) {
-          Object.assign(this.videos[index], this.editedItem);
-        }
-      }
-      this.closeDialog();
-    },
-    deleteItemConfirmed() {
-      const index = this.videos.findIndex(i => i.description === this.deletedItem.description);
-      if (index !== -1) {
-        this.videos.splice(index, 1);
-      }
-      this.closeDeleteDialog();
-    },
-  },
-};
+      fixedHeader: false,
+      order: [],
+      lengthMenu: [
+          [5, 10, 25, 50, 100],
+          [5, 10, 25, 50, 100],
+      ],
+      pageLength: 5,
+      autoWidth: true,
+      responsive: true,
+  }
 </script>
 
 <style scoped>
-.v-card {
-  display: flex;
-  flex-direction: column;
+@import 'datatables.net-dt';
+@import 'datatables.net-buttons-dt';
+@import 'datatables.net-responsive-dt';
+@import 'datatables.net-select-dt';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+table.dataTable th.dt-type-numeric,
+table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date {
+    text-align: center;
 }
-
-.action {
-  align-self: center;
+.fa-pencil:hover,
+.fa-trash:hover {
+    cursor: pointer;
 }
-
-.v-card {
-  display: flex;
-  flex-direction: column;
+table.dataTable th, table.dataTable td{
+    box-sizing: unset;
 }
-
-.v-card-title {
-  display: flex;
+.colEdit, .colDelete {
+    width: 50px; 
+    text-align: center;
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
+.colDate {
+  width: 150px;
 }
-
-.v-data-table {
-  white-space: nowrap;
-}
-
-.icons {
-  display:flex;
-  justify-content: center;
-}
-
-.v-card-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btnGreen {
-  display: block;
-  color: #fff;
-  border: none;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-  font-size: 14px;
-  padding: 5px 15px;
-  transition: all 0.25s ease;
-  text-transform: uppercase;
-  background-color: #91C141;
-}
-
-.btnGreen:hover {
-  background-color: #6d9232;
-}
-
-.btnCancel {
-  display: block;
-  border: none;
-  font-weight: bold;
-  letter-spacing: 0.8px;
-  font-size: 14px;
-  padding: 5px 15px;
-  transition: all 0.25s ease;
-  text-transform: uppercase;
-}
-
-.btnAdd {
-  align-self: flex-end;
-  margin-top: 16px;
-}
-
-@media screen and (max-width: 767px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header .v-text-field {
-    width: 100%;
-  }
-
-  .title {
-    padding-bottom: 16px;
-  }
-
-  .btnAdd {
-    align-self: center;
-  }
+.img {
+    height: 100px;
 }
 </style>
