@@ -7,7 +7,6 @@
         <tr>
           <th>Título</th>
           <th>Descrição</th>
-          <th class="colDate">Data de Criação</th>
           <th class="colDate">Última Alteração</th>
           <th class="colEdit">Editar</th>
           <th class="colDelete">Excluir</th>
@@ -42,9 +41,9 @@ const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="moda
 const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteTextModal"></i>';
 
 const data = [
-  ['Texto 1', 'Texto sobre x', '03/04/2024 - 21:45', '03/04/2024 - 21:48', editar, excluir],
-  ['Texto 2', 'Texto sobre x', '02/04/2024 - 21:40', '03/04/2024 - 21:47', editar, excluir],
-  ['Texto 3', 'Texto sobre x', '01/04/2024 - 21:35', '03/04/2024 - 21:46', editar, excluir],
+  ['Texto 1', 'Texto sobre x', '03/04/2024 - 21:48', editar, excluir],
+  ['Texto 2', 'Texto sobre x', '03/04/2024 - 21:47', editar, excluir],
+  ['Texto 3', 'Texto sobre x', '03/04/2024 - 21:46', editar, excluir],
 ];
 
 const options = {

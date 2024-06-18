@@ -7,7 +7,6 @@
         <tr>
           <th>Título</th>
           <th>Descrição</th>
-          <th class="colDate">Data de Criação</th>
           <th class="colDate">Última Alteração</th>
           <th class="colEdit">Editar</th>
           <th class="colDelete">Excluir</th>
@@ -18,7 +17,6 @@
           <td class="tdVideo">{{ row[1] }}</td>
           <td class="tdVideo">{{ row[2] }}</td>
           <td class="tdVideo">{{ row[3] }}</td>
-          <td class="tdVideo">{{ row[4] }}</td>
         </tr>
       </tbody>
     </DataTable>
@@ -42,9 +40,9 @@
   const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteVideoModal"></i>';
 
   const data = [
-    ['Instruções', 'Instruções importantes', '03/04/2024 - 21:45', '03/04/2024 - 21:48', editar, excluir],
-    ['Instruções 2', 'Instruções importantes', '02/04/2024 - 21:40', '03/04/2024 - 21:47', editar, excluir],
-    ['Recordações', 'Recordações importante', '01/04/2024 - 21:35', '03/04/2024 - 21:46', editar, excluir],
+    ['Instruções', 'Instruções importantes', '03/04/2024 - 21:48', editar, excluir],
+    ['Instruções 2', 'Instruções importantes', '03/04/2024 - 21:47', editar, excluir],
+    ['Recordações', 'Recordações importante', '03/04/2024 - 21:46', editar, excluir],
   ];
   const options = {
       language: {
