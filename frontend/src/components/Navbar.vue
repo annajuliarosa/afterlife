@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <img src="../assets/imgs/AfterlifeLogoCompleta.png" alt="Afterlife Logo">
       </a>
       <ul class="navbar-nav ms-auto">
