@@ -30,6 +30,7 @@ export default {
   height: 200px;
   background-color: #617a95;
   position: relative;
+  cursor:pointer;
 }
 
 .tituloPasta {

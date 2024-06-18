@@ -9,39 +9,45 @@
     </div>
     <div class="row mt-3">
       <div class="col-lg-4 col-md-6 col-12 p-1">
-        <Folder
+        <Folder 
           titulo="IMAGENS"
           descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          @click="goToDocumentFile"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="DOCUMENTOS"
           descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          @click="goToDocumentFile"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="SENHAS"
           descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          @click="goToSenhas"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="ÁUDIOS"
           descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          @click="goToAudio"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="TEXTOS"
           descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          @click="goToText"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="VÍDEOS"
           descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          @click="goToVideo"
         ></Folder>
       </div>
     </div>
@@ -53,6 +59,7 @@
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
 import Navbar from "../components/Navbar.vue";
 import Footer from "../components/Footer.vue";
 import Folder from "../components/Folder.vue";
@@ -63,6 +70,37 @@ import ModalExcluirPasta from "../components/DeleteFolder.vue";
 export default {
   name: "viewArmazenamento",
   components: { Navbar, Footer, Folder, ModalNovaPasta, ModalEditarPasta, ModalExcluirPasta },
+  setup() {
+    const router = useRouter();
+    
+    const goToDocumentFile = () => {
+      router.push({ name: 'DocumentFile' });
+    };
+    
+    const goToSenhas = () => {
+      router.push({ name: 'viewSenhas' });
+    };
+    
+    const goToAudio = () => {
+      router.push({ name: 'viewAudios' });
+    };
+    
+    const goToText = () => {
+      router.push({ name: 'viewText' });
+    };
+    
+    const goToVideo = () => {
+      router.push({ name: 'viewVideo' });
+    };
+    
+    return {
+      goToDocumentFile,
+      goToSenhas,
+      goToAudio,
+      goToText,
+      goToVideo,
+    };
+  }
 };
 </script>
 
@@ -74,13 +112,13 @@ p {
   display: inline-block;
 }
 
-.tituloPagina{
-    display: inline-block;
-    margin: 0;
+.tituloPagina {
+  display: inline-block;
+  margin: 0;
 }
 
 .wrapperNovaPastaPesquisa {
-    float: right;
+  float: right;
 }
 
 .container {
@@ -102,9 +140,8 @@ p {
   border-color: black;
 }
 
-.pesquisarPasta{
+.pesquisarPasta {
   height: 34px;
   margin-left: 10px;
 }
-
 </style>
