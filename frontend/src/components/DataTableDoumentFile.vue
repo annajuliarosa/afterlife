@@ -1,6 +1,6 @@
 <template>
     <ModalEditUser></ModalEditUser>
-    <ModalDeleteUser></ModalDeleteUser>
+    <ModalDeleteDocument></ModalDeleteDocument>
         <DataTable :data="data" class="table table-hover table-striped nowrap table-bordered" :options="options">
             <thead class="collapsed">
                 <tr>
@@ -19,13 +19,12 @@
 
 import { DataTable } from 'datatables.net-vue3';
 import DataTablesCore from 'datatables.net-bs5';
-import ModalDeleteUser from './ModalDeleteUser.vue';
-import ModalEditUser from './ModalEditUser.vue';
+import ModalDeleteDocument from './ModalDeleteDocument.vue';
 
 DataTable.use(DataTablesCore);
 
-const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editUser"></i>';
-const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#deleteUser"></i>';
+const editar = '<i class="fa-solid fa-pencil" type="button" data-bs-toggle="modal" data-bs-target="#editModalDocument"></i>';
+const excluir = '<i class="fa-solid fa-trash" type="button" data-bs-toggle="modal" data-bs-target="#excluirDocumento"></i>';
 
 const data = [
     ['Documento de Identidade', 'Identidade', '20/08/1983', '20/08/1983', editar, excluir],
@@ -62,7 +61,7 @@ const options = {
 }
 
 </script>
-<style>
+<style scoped>
 @import 'bootstrap';
 @import 'datatables.net-bs5';
 
@@ -84,9 +83,9 @@ li.dt-paging-button.page-item.active a {
     color: white !important;
 }
 
-li.dt-paging-button.page-item a.page-link {
+/* li.dt-paging-button.page-item a.page-link {
     color: #000000;
-}
+} */
 
 .page-item.active .page-link:focus, .page-link:focus-within {
     box-shadow: 0 0px 0px 3px #90c1417e !important;

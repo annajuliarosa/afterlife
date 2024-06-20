@@ -44,32 +44,10 @@ export default {
     margin-bottom: 2%;
 }
 
-#btnDoc{
-    margin-top: 3%;
-}
 
 .bi-plus-lg{    
     font-weight: bold;
 }
 
-#btnSave{
-    margin-top: 2%;
-    font-weight: bolder;
-    border: 1px solid #91C141;
-    color: white;
-    background-color: #91C141;
-    width: 8rem;
-    height: 2rem;
-
-}
-
-#btnClear{
-    border: 1px solid white;
-    color: black;
-    font-weight: bolder;
-    background-color: white;
-    width: 8rem;
-    height: 2rem;
-}
 
 </style>
