@@ -103,6 +103,7 @@ li.dt-paging-button.page-item.active a {
     color: #000000;
     z-index: 0!important;
 }
+*/
 
 .page-item.active .page-link:focus, .page-link:focus-within {
     box-shadow: 0 0px 0px 3px #90c1417e !important;
