@@ -256,4 +256,9 @@ export default {
   text-decoration: none;
   color: black;
 }
+
+.btnSalvar {
+  color: #fff;
+  border: none;
+}
 </style>

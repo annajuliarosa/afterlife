@@ -2,7 +2,7 @@
   <div>
     <ModalEditText />
     <ModalDeleteText />
-    <DataTable :options="options" :data="data" search=false class="display nowrap" width="100%">
+    <DataTable :options="options" :data="data" search class="display nowrap" width="100%">
       <thead class="collapsed">
         <tr>
           <th>Título</th>
@@ -48,6 +48,7 @@ const data = [
 
 const options = {
   language: {
+    search: "Pesquisar",
     decimal: "",
     emptyTable: "Sem dados disponíveis",
     infoPostFix: "",

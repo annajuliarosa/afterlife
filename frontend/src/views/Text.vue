@@ -1,17 +1,21 @@
 <template>
   <div>
-    <Navbar/>
+    <Navbar />
     <div class="container">
-      <h2>Arquivo: Textos</h2>
-      <DataTableText/>
+      <p>
+        <i class="bi bi-chevron-left iconBack" @click="goToFolders"></i>
+        Arquivo: Textos
+      </p>
+      <DataTableText />
       <div class="buttonWrapper">
-        <ButtonBlue :text="textAdd" :data-bs-toggle="'modal'" :data-bs-target="target"/> 
+        <ButtonBlue :text="textAdd" :data-bs-toggle="'modal'" :data-bs-target="target" />
       </div>
       <ModalAddText />
     </div>
-    <Footer/>
+    <Footer />
   </div>
 </template>
+
 <script>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
@@ -21,7 +25,18 @@ import DataTableText from '../components/DataTableText.vue';
 
 export default {
   name: 'viewText',
-  components: { Navbar, Footer, ButtonBlue, ModalAddText, DataTableText },
+  components: {
+    Navbar,
+    Footer,
+    ButtonBlue,
+    ModalAddText,
+    DataTableText
+  },
+  methods: {
+    goToFolders() {
+      this.$router.push({ name: 'viewArmazenamento' });
+    }
+  },
   data() {
     return {
       textAdd: '+ novo texto',
@@ -30,20 +45,30 @@ export default {
   }
 }
 </script>
+
 <style scoped>
+p {
+  font-size: 24px;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.iconBack {
+  cursor: pointer;
+}
+
 .container {
   padding: 30px 10px;
 }
-h2 {
-  font-size: 18px;
-}
+
 .buttonWrapper {
   display: flex;
   justify-content: flex-end;
   padding-top: 10px;
 }
+
 @media screen and (max-width: 767px) {
-  h2 {
+  p {
     text-align: center;
   }
   .buttonWrapper {

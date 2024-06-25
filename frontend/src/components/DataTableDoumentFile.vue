@@ -59,6 +59,7 @@ const options = {
     ],
     pageLength: 5,
     autoWidth: true,
+        responsive: true,
 }
 
 </script>

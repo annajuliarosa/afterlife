@@ -2,7 +2,7 @@
   <div>
     <ModalEditVideo />
     <ModalDeleteVideo />
-    <DataTable :options="options" :data="data" search=false class="display nowrap tableVideo" width="100%">
+    <DataTable :options="options" :data="data" class="display nowrap" width="100%">
       <thead class="collapsed">
         <tr>
           <th>Título</th>

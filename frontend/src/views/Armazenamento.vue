@@ -11,42 +11,42 @@
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder 
           titulo="IMAGENS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
           @click="goToDocumentFile"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="DOCUMENTOS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
           @click="goToDocumentFile"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="SENHAS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
           @click="goToSenhas"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="ÁUDIOS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
           @click="goToAudio"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="TEXTOS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
           @click="goToText"
         ></Folder>
       </div>
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="VÍDEOS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
           @click="goToVideo"
         ></Folder>
       </div>
