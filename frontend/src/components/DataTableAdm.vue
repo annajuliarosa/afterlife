@@ -96,11 +96,14 @@ li.dt-paging-button.page-item.active a {
     background-color: #91C141;
     border-color: #91C141;
     color: white !important;
+    z-index: 0!important;
 }
 
-li.dt-paging-button.page-item a.page-link {
+/* li.dt-paging-button.page-item a.page-link {
     color: #000000;
+    z-index: 0!important;
 }
+*/
 
 .page-item.active .page-link:focus, .page-link:focus-within {
     box-shadow: 0 0px 0px 3px #90c1417e !important;
@@ -108,6 +111,11 @@ li.dt-paging-button.page-item a.page-link {
 
 table.dataTable th, table.dataTable td{
     box-sizing: unset;
+}
+
+div.dt-container .dt-paging .dt-paging-button {
+    padding: 0!important;
+    margin-left:0!important;
 }
 
 </style>

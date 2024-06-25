@@ -1,47 +1,61 @@
 <template>
+  <div>
+<!-- BARRA DE CIMA -->
   <Navbar></Navbar>
   <div class="container mb-4">
     <p class="text-start">Armazenamento</p>
     <div class="d-flex justify-content-end">
       <button type="button" class="btnNovaPasta" data-bs-target="#createFolder"
                   data-bs-toggle="modal">NOVA PASTA</button>
-      <input type="text" class="pesquisarPasta" placeholder="Pesquisar"/>
+      <input type="text" class="pesquisarPasta form-control" placeholder="Pesquisar"/>
     </div>
+
     <div class="row mt-3">
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="IMAGENS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
+          @click="goToDocumentFile"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="DOCUMENTOS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
+          @click="goToDocumentFile"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="SENHAS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
+          @click="goToSenhas"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="ÁUDIOS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
+          @click="goToAudio"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="TEXTOS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
+          @click="goToText"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="VÍDEOS"
-          descricao="loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est. loremIncididunt dolor nostrud laborum ullamco est."
+          descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
+          @click="goToVideo"
         ></Folder>
       </div>
     </div>
@@ -49,7 +63,10 @@
   <ModalNovaPasta></ModalNovaPasta>
   <ModalEditarPasta></ModalEditarPasta>
   <ModalExcluirPasta></ModalExcluirPasta>
-  <Footer></Footer>
+
+  <!-- BARRA DE BAIXO -->
+  <Footer/>
+  </div>
 </template>
 
 <script>
@@ -72,6 +89,10 @@ p {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   display: inline-block;
+}
+
+.p-1 {
+  padding: 1rem!important;
 }
 
 .tituloPagina{
@@ -105,6 +126,6 @@ p {
 .pesquisarPasta{
   height: 34px;
   margin-left: 10px;
+  width: 300px;
 }
-
 </style>

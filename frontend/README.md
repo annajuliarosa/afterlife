@@ -8,13 +8,25 @@ npm install
 
 ```sh
 npm install -g @vue/cli
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+>>>>>>> 30b4cb8ed72bde0a7e1846014a4e896f5bf42bdb
 ```
 
 ### Compile and Hot-Reload for Development
 
+
 ```sh
 npm run dev  (se não funcionar -> npm run serve)
 ```
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Bootstrap installation
 
@@ -41,4 +53,5 @@ npm install --save datatables.net-dt
 npm install --save datatables.net-responsive-dt
 npm install --save datatables.net-select
 npm install --save datatables.net-select-dt
+```
 ```

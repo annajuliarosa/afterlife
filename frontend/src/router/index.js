@@ -10,10 +10,9 @@ import Adm from "../views/Adm.vue";
 import Text from "../views/Text.vue";
 import Video from "../views/Video.vue";
 import Audios from "../views/Audios.vue";
-
 import Armazenamento from "../views/Armazenamento.vue";
 import Senhas from "../views/Senhas.vue";
-
+import DocumentFile from "../views/DocumentFile.vue";
 
 const routes = [
   {
@@ -53,6 +52,11 @@ const routes = [
     name: "viewText",
     component: Text,
   },
+  {
+    path: "/documentFile/",
+    name: "DocumentFile",
+    component: DocumentFile,
+  }
 ];
 
 const router = createRouter({
