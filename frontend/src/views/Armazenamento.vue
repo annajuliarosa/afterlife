@@ -1,13 +1,13 @@
 <template>
+  <div>
 <!-- BARRA DE CIMA -->
   <Navbar></Navbar>
-  
   <div class="container mb-4">
     <p class="text-start">Armazenamento</p>
     <div class="d-flex justify-content-end">
       <button type="button" class="btnNovaPasta" data-bs-target="#createFolder"
                   data-bs-toggle="modal">NOVA PASTA</button>
-      <input type="text" class="pesquisarPasta" placeholder="Pesquisar"/>
+      <input type="text" class="pesquisarPasta form-control" placeholder="Pesquisar"/>
     </div>
 
     <div class="row mt-3">
@@ -65,7 +65,8 @@
   <ModalExcluirPasta></ModalExcluirPasta>
 
   <!-- BARRA DE BAIXO -->
-  <Footer></Footer>
+  <Footer/>
+  </div>
 </template>
 
 <script>
@@ -125,5 +126,6 @@ p {
 .pesquisarPasta{
   height: 34px;
   margin-left: 10px;
+  width: 300px;
 }
 </style>

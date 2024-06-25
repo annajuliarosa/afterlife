@@ -1,4 +1,5 @@
 <template>
+<div>
   <div
     class="modal fade"
     id="exampleModalToggle"
@@ -209,6 +210,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>

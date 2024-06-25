@@ -49,10 +49,6 @@ export default {
   float: right;
 }
 
-.fa-trash:hover, .fa-pencil:hover {
-  background-color: black;
-}
-
 .wrapperPasta {
   padding: 5px 10px !important;
   height: 200px;
