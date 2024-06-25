@@ -1,5 +1,7 @@
 <template>
+<!-- BARRA DE CIMA -->
   <Navbar></Navbar>
+  
   <div class="container mb-4">
     <p class="text-start">Armazenamento</p>
     <div class="d-flex justify-content-end">
@@ -7,14 +9,16 @@
                   data-bs-toggle="modal">NOVA PASTA</button>
       <input type="text" class="pesquisarPasta" placeholder="Pesquisar"/>
     </div>
+
     <div class="row mt-3">
       <div class="col-lg-4 col-md-6 col-12 p-1">
-        <Folder 
+        <Folder
           titulo="IMAGENS"
           descricao="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet turpis non mi rhoncus sollicitudin. Ut nec urna sodales."
           @click="goToDocumentFile"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="DOCUMENTOS"
@@ -22,6 +26,7 @@
           @click="goToDocumentFile"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="SENHAS"
@@ -29,6 +34,7 @@
           @click="goToSenhas"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="ÁUDIOS"
@@ -36,6 +42,7 @@
           @click="goToAudio"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="TEXTOS"
@@ -43,6 +50,7 @@
           @click="goToText"
         ></Folder>
       </div>
+
       <div class="col-lg-4 col-md-6 col-12 p-1">
         <Folder
           titulo="VÍDEOS"
@@ -55,6 +63,8 @@
   <ModalNovaPasta></ModalNovaPasta>
   <ModalEditarPasta></ModalEditarPasta>
   <ModalExcluirPasta></ModalExcluirPasta>
+
+  <!-- BARRA DE BAIXO -->
   <Footer></Footer>
 </template>
 
@@ -68,31 +78,7 @@ import ModalExcluirPasta from "../components/DeleteFolder.vue";
 
 export default {
   name: "viewArmazenamento",
-  components: { 
-    Navbar, 
-    Footer, 
-    Folder, 
-    ModalNovaPasta, 
-    ModalEditarPasta, 
-    ModalExcluirPasta 
-  },
-  methods: {
-    goToDocumentFile() {
-      this.$router.push({ name: 'DocumentFile' });
-    },
-    goToSenhas() {
-      this.$router.push({ name: 'viewSenhas' });
-    },
-    goToAudio() {
-      this.$router.push({ name: 'viewAudios' });
-    },
-    goToText() {
-      this.$router.push({ name: 'viewText' });
-    },
-    goToVideo() {
-      this.$router.push({ name: 'viewVideo' });
-    }
-  }
+  components: { Navbar, Footer, Folder, ModalNovaPasta, ModalEditarPasta, ModalExcluirPasta },
 };
 </script>
 
@@ -104,13 +90,17 @@ p {
   display: inline-block;
 }
 
-.tituloPagina {
-  display: inline-block;
-  margin: 0;
+.p-1 {
+  padding: 1rem!important;
+}
+
+.tituloPagina{
+    display: inline-block;
+    margin: 0;
 }
 
 .wrapperNovaPastaPesquisa {
-  float: right;
+    float: right;
 }
 
 .container {
@@ -132,7 +122,7 @@ p {
   border-color: black;
 }
 
-.pesquisarPasta {
+.pesquisarPasta{
   height: 34px;
   margin-left: 10px;
 }

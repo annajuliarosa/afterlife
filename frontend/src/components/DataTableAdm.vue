@@ -99,7 +99,7 @@ li.dt-paging-button.page-item.active a {
     z-index: 0!important;
 }
 
-li.dt-paging-button.page-item a.page-link {
+/* li.dt-paging-button.page-item a.page-link {
     color: #000000;
     z-index: 0!important;
 }
